@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Single Blog Left Sidebar - BIGBAG Store</title>
+
+    <!-- PLUGINS CSS STYLE -->
+
+    <!-- GOOGLE FONT -->
+    <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
+
+    <!-- CUSTOM CSS -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="main-wrapper">
+
+      <!-- HEADER -->
+      <div class="header clearfix">
+
+        <!-- TOPBAR -->
+        <div class="topBar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 hidden-sm hidden-xs">
+                <ul class="list-inline">
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                  <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <ul class="list-inline pull-right">
+                  <li><span><a data-toggle="modal" href='#login'>Log in</a><small>or</small><a data-toggle="modal" href='#signup'>Create an account</a></span></li>
+                  <li class="dropdown searchBox">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>
+                        <span class="input-group">
+                          <input type="text" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
+                          <span class="input-group-addon" id="basic-addon2">Search</span>
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>$0</a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>Item(s) in your cart</li>
+                      <li>
+                        <a href="#">
+                          <div class="media">
+                            <%= image_tag("img/home/cart-items/cart-item-01.jpg", :class => "media-left media-objec", :alt => "cart-Image") %>
+                            <div class="media-body">
+                              <h5 class="media-heading">INCIDIDUNT UT <br><span>2 X $199</span></h5>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <div class="media">
+                            <%= image_tag("img/home/cart-items/cart-item-01.jpg", :class => "media-left media-objec", :alt => "cart-Image") %>
+                            <div class="media-body">
+                              <h5 class="media-heading">INCIDIDUNT UT <br><span>2 X $199</span></h5>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <div class="btn-group" role="group" aria-label="...">
+                          <button type="button" class="btn btn-default">Shopping Cart</button>
+                          <button type="button" class="btn btn-default">Checkout</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-main navbar-default" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><%= image_tag("img/logo.png", :alt => "") %></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown megaDropMenu">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Shop</b></a>
+                  <ul class="dropdown-menu row">
+                    <li class="col-sm-3 col-xs-12">
+                      <ul class="list-unstyled">
+                        <li>Products Grid View</li>
+                        <li><a href="product_grid_left_sidebar.html">Products Sidebar Left</a></li>
+                        <li><a href="product-grid-right-sidebar.html">Products Sidebar Right</a></li>
+                        <li><a href="product-grid-3-col-filter.html">Products 3 Columns V1</a></li>
+                        <li><a href="product-grid-3-col.html">Products 3 Columns V2</a></li>
+                        <li><a href="product-grid-4-col.html">Products 4 Columns</a></li>
+                      </ul>
+                    </li>
+                    <li class="col-sm-3 col-xs-12">
+                      <ul class="list-unstyled">
+                        <li>Products List View</li>
+                        <li><a href="product_list_left_sidebar.html">Products Sidebar Left</a></li>
+                        <li><a href="product-list-right-sidebar.html">Products Sidebar Right</a></li>
+                        <li class="listHeading">Others</li>
+                        <li><a href="single_product.html">Single Product</a></li>
+                        <li><a href="cart_page.html">Cart Page</a></li>
+                      </ul>
+                    </li>
+                    <li class="col-sm-3 col-xs-12">
+                      <ul class="list-unstyled">
+                        <li>Checkout</li>
+                        <li><a href="checkout-step-1.html">Step 1 - Address</a></li>
+                        <li><a href="checkout-step-2.html">Step 2 - Shipping</a></li>
+                        <li><a href="checkout-step-3.html">Step 3 - Payment</a></li>
+                        <li><a href="checkout-step-4.html">Step 4 - Payment</a></li>
+                        <li><a href="checkout-complete.html">Order Complete</a></li>
+                      </ul>
+                    </li>
+                    <li class="col-sm-3 col-xs-12">
+                      <a href="#" class="menu-photo"><%= image_tag("img/menu-photo.jpg", :alt => "menu-img") %></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">pages</a>
+                  <ul class="dropdown-menu dropdown-menu-left">
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="signup.html">Register</a></li>
+                    <li><a href="signup-login.html">Register or Login</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="lost-password.html">Password Recovery</a></li>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                    <li><a href="404.html">404 Not Found</a></li>
+                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown active">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">blog</a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="blog_right_sidebar.html">Right Sidebar</a></li>
+                    <li><a href="blog_left_sidebar.html">Left Sidebar</a></li>
+                    <li><a href="blog-fullwidth.html">Full Width</a></li>
+                    <li><a href="blog-single-fullwidth.html">Single Post</a></li>
+                    <li><a href="blog_single_right_sidebar.html">Single Right Sidebar</a></li>
+                    <li class="active"><a href="blog_single_left_sidebar.html">Single Left Sidebar</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="account-dashboard.html">Dashboard</a></li>
+                    <li><a href="account-profile.html">Profile</a></li>
+                    <li><a href="account-all-orders.html">All Orders</a></li>
+                    <li><a href="account-single-order.html">Single Order</a></li>
+                    <li><a href="account-wishlist.html">Wishlist</a></li>
+                    <li><a href="account-address.html">Address</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </nav>
+
+      </div>
+
+      <!-- LIGHT SECTION -->
+      <section class="lightSection clearfix pageHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="page-title">
+                <h2>Blog Single sidebar</h2>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <ol class="breadcrumb pull-right">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="active">Blog Single sidebar</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT SECTION -->
+      <section class="mainContent clearfix blogPage singleBlog">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-sm-8 col-md-push-3 col-sm-push-4 col-xs-12">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="thumbnail">
+                    <%= image_tag("img/blog/blog-01.jpg", :alt => "blog-image") %>
+                    <div class="caption">
+                      <div class="row">
+                       <!--  <div class="col-md-3 col-md-push-9 col-sm-4 col-sm-push-8 col-xs-12">
+                          <h5>Details</h5>
+                          <ul class="list-unstyled">
+                            <li><i class="fa fa-user" aria-hidden="true"></i>Adam Smith</li>
+                            <li><i class="fa fa-calendar" aria-hidden="true"></i>Mar 20, 2016</li>
+                            <li><i class="fa fa-tags" aria-hidden="true"></i>Travel</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i>8 comments</li>
+                          </ul>
+                          <h5>Share</h5>
+                          <ul class="list-inline">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+                          </ul>
+                        </div> -->
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                          <h3>記事タイトル </h3>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+                          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+
+                          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="pager">
+                      <li class="previous"><a href="#">前の記事へ</a></li>
+                      <li class="next"><a href="#">次の記事へ</a></li>
+                    </ul>
+                <!--     <div class="commentsArea">
+                  <h3>4 Comments</h3>
+                  <div class="media">
+                    <a class="media-left" href="#">
+                      <img class="media-object" src="img/blog/avatar.jpg" alt="Image">
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading">Jessica Brown </h4>
+                      <h4><span><i class="fa fa-calendar" aria-hidden="true"></i>Mar 20, 2016</span></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                      <button class="btn btn-link" type="submit">Reply</button>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <a class="media-left" href="#">
+                      <img class="media-object" src="img/blog/avatar.jpg" alt="Image">
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading">Jessica Brown </h4>
+                      <h4><span><i class="fa fa-calendar" aria-hidden="true"></i>Mar 20, 2016</span></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                      <button class="btn btn-link" type="submit">Reply</button>
+                      <div class="media">
+                        <a class="media-left" href="#">
+                          <img class="media-object" src="img/blog/avatar.jpg" alt="Image">
+                        </a>
+                        <div class="media-body">
+                          <h4 class="media-heading">Jessica Brown </h4>
+                          <h4><span><i class="fa fa-calendar" aria-hidden="true"></i>Mar 20, 2016</span></h4>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                          <button class="btn btn-link" type="submit">Reply</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <a class="media-left" href="#">
+                      <img class="media-object" src="img/blog/avatar.jpg" alt="Image">
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading">Jessica Brown </h4>
+                      <h4><span><i class="fa fa-calendar" aria-hidden="true"></i>Mar 20, 2016</span></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                      <button class="btn btn-link" type="submit">Reply</button>
+                    </div>
+                  </div>
+                </div> -->
+                  </div>
+                </div>
+              </div>
+     <!--          <div class="row">
+                <div class="col-xs-12">
+                  <form action="" method="POST" role="form" class="commentsForm">
+                    <h3>Leave Comments</h3>
+                    <div class="row">
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="" placeholder="Name">
+                        </div>
+                      </div>
+                      <div class="col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="" placeholder="Website">
+                        </div>
+                      </div>
+                      <div class="col-xs-12">
+                        <div class="form-group">
+                          <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
+                        </div>
+                      </div>
+
+                    </div>
+                    <button type="submit" class="btn btn-primary">コメント</button>
+                  </form>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-md-3 col-sm-4 col-md-pull-9 col-sm-pull-8 col-xs-12 sideBar">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" aria-describedby="basic-addon2">
+                <a href="#" class="input-group-addon" id="basic-addon2"><i class="fa fa-search"></i></a>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">カテゴリー</div>
+                <div class="panel-body">
+                  <ul class="list-unstyle sidebar-list">
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>アクセサリー <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>バッグ <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>洋服 <span>(25)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>ベッド &amp; バス <span>(2)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>スイミング <span>(5)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>スポーツウェア &amp; シューズ <span>(3)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default recentBlogPosts">
+                <div class="panel-heading">最新記事</div>
+                <div class="panel-body">
+                  <div class="media">
+                    <a class="media-left" href="blog_single_right_sidebar.html">
+                      <%= image_tag("img/blog/blog-small-01.jpg", :class => "media-object", :alt => "Image") %>
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="blog_single_right_sidebar.html">記事タイトル（20文字）</a></h4>
+                      <p><i class="fa fa-calendar" aria-hidden="true"></i>2016/5/5</p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <a class="media-left" href="blog_single_right_sidebar.html">
+                      <%= image_tag("img/blog/blog-small-02.jpg", :class => "media-object", :alt => "Image") %>
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="blog_single_right_sidebar.html">記事タイトル（20文字）</a></h4>
+                      <p><i class="fa fa-calendar" aria-hidden="true"></i>2016/5/5</p>
+                    </div>
+                  </div>
+                  <div class="media">
+                    <a class="media-left" href="blog_single_right_sidebar.html">
+                      <%= image_tag("img/blog/blog-small-03.jpg", :class => "media-object", :alt => "Image") %>
+                    </a>
+                    <div class="media-body">
+                      <h4 class="media-heading"><a href="blog_single_right_sidebar.html">記事タイトル（20文字）</a></h4>
+                      <p><i class="fa fa-calendar" aria-hidden="true"></i>2016/5/5</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <div class="footer clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-2 col-xs-12">
+              <div class="footerLink">
+                <h5>Accessories</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Body care </a></li>
+                  <li><a href="#">Chambray </a></li>
+                  <li><a href="#">Floral </a></li>
+                  <li><a href="#">Rejuvination </a></li>
+                  <li><a href="#">Shaving </a></li>
+                  <li><a href="#">Toilette </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-2 col-xs-12">
+              <div class="footerLink">
+                <h5>BRANDS</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Barbour </a></li>
+                  <li><a href="#">Brioni </a></li>
+                  <li><a href="#">Oliver Spencer</a></li>
+                  <li><a href="#">Belstaff</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-2 col-xs-12">
+              <div class="footerLink">
+                <h5>Accessories</h5>
+                <ul class="list-unstyled">
+                  <li><a href="#">Body care </a></li>
+                  <li><a href="#">Chambray </a></li>
+                  <li><a href="#">Floral </a></li>
+                  <li><a href="#">Rejuvination </a></li>
+                  <li><a href="#">Shaving </a></li>
+                  <li><a href="#">Toilette </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-2 col-xs-12">
+              <div class="footerLink">
+                <h5>Get in Touch</h5>
+                <ul class="list-unstyled">
+                  <li>Call us at (555)-555-5555</li>
+                  <li><a href="mailto:support@iamabdus.com">support@iamabdus.com</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <div class="newsletter clearfix">
+                <h4>Newsletter</h4>
+                <h3>Sign up now</h3>
+                <p>Enter your email address and get notified about new products. We hate spam!</p>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="your email address" aria-describedby="basic-addon2">
+                  <a href="#" class="input-group-addon" id="basic-addon2">go <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COPY RIGHT -->
+      <div class="copyRight clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7 col-xs-12">
+              <p>&copy; 2016 Copyright Bigbag Store Bootstrap Template by <a target="_blank" href="http://www.iamabdus.com/">Abdus</a>.</p>
+            </div>
+            <div class="col-sm-5 col-xs-12">
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">log in</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="text" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember Me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">log in</button>
+              <button type="button" class="btn btn-link btn-block">Forgot Password?</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Create an account</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="email" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -12,4 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require plugins/jquery-ui/jquery-ui
+//= require plugins/bootstrap/js/bootstrap.min
+//= require plugins/rs-plugin/js/jquery.themepunch.tools.min
+//= require plugins/rs-plugin/js/jquery.themepunch.revolution.min
+//= require plugins/owl-carousel/owl.carousel
+//= require plugins/selectbox/jquery.selectbox-0.1.3.min
+//= require plugins/countdown/jquery.syotimer
+//= require js/custom
+//= require_self
