@@ -1,3 +1,5 @@
+# ポテパンキャンプECサイトリポジトリ
+
 ## 開発環境のセットアップ
 ポテパンキャンプで開発を行っていくため、一般的なMacでのRails開発環境のセットアップをおこないます。
 
@@ -42,11 +44,32 @@ rbenv install 2.4.1
 
 ### プロジェクトのフォーク
 
+[potapanec](https://bitbucket.org/potepancamp/potepanec)へ移動し、左のプラスボタンをクリックします。
 
+![](docs/images/installation/fork1.png)
+
+** Fork ** this repository のリンクをクリックします。
+
+![](docs/images/installation/fork2.png)
+
+所有者が自分になっていることを確認して、リポジトリをフォークします。
+
+![](docs/images/installation/fork3.png)
+
+
+### プロジェクトの clone
+
+上記でフォークしたリポジトリを自分のPCにクローンします
+
+例：
+
+```
+git clone https://motchang@bitbucket.org/motchang/potepanec.git
+```
 
 ### ライブラリのインストール
 
-ターミナルで下記コマンドを実行します
+上記でクローンしたディレクトリに移動し、ターミナルで下記コマンドを実行します
 
 ```bash
 gem install bundler
