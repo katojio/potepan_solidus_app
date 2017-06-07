@@ -12,6 +12,15 @@ ruby のインストールや、その他のパッケージのインストール
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+### MySQL のインストール
+オープンソースの[RDBMS](https://ja.wikipedia.org/wiki/%E9%96%A2%E4%BF%82%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0) MySQL をインストールします。
+
+```
+brew install mysql
+brew tap homebrew/services
+brew services start mysql
+```
+
 ### rbenv のインストール
 
 様々な ruby のバージョンで開発を行うために、[rbenv](https://github.com/rbenv/rbenv) のインストールを行います。
@@ -77,7 +86,7 @@ gem install bundler
 brew install libxml2
 bundle config build.nokogiri --use-system-libraries --with-xml2-include=$(brew --prefix libxml2)/include/libxml2
 
-bundle install --path vendor/bundle -j4
+bundle install
 ```
 
 ### データベースの作成と最新状態へ移行
