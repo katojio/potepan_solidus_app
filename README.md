@@ -20,6 +20,13 @@ brew install mysql
 brew tap homebrew/services
 brew services start mysql
 ```
+### ImageMagick のインストール
+画像変換ツールの ImageMagick をインストールします。
+
+```
+brew install imagemagick
+```
+
 
 ### rbenv のインストール
 
