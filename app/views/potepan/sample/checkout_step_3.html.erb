@@ -9,19 +9,12 @@
     <title>Step # 04 - BIGBAG Store</title>
 
     <!-- PLUGINS CSS STYLE -->
-    <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
-    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/owl.carousel.css" media="screen">
+    <%= stylesheet_link_tag "application", :media => "all" %>
 
     <!-- GOOGLE FONT -->
-    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
 
     <!-- CUSTOM CSS -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/colors/default.css" id="option_color">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,7 +65,7 @@
                       <li>
                         <a href="single-product.html">
                           <div class="media">
-                            <img class="media-left media-object" src="img/home/cart-items/cart-item-01.jpg" alt="cart-Image">
+                            <%= image_tag("home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
                             <div class="media-body">
                               <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
                             </div>
@@ -92,7 +85,7 @@
                       <li>
                         <div class="btn-group" role="group" aria-label="...">
                           <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';">カートを見る</button>
-                          <button type="button" class="btn btn-default" onclick="location.href='checkout-step-1.html';">購入する</button>
+                          <button type="button" class="btn btn-default" onclick="location.href='checkout_step_1.html';">購入する</button>
                         </div>
                       </li>
                     </ul>
@@ -114,7 +107,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+              <a class="navbar-brand" href="javascript:void(0)"><%= image_tag("logo.png") %></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -287,7 +280,7 @@
                             <tr>
                               <td class="col-xs-2">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <span class="cartImage"><img src="img/products/cart-image.jpg" alt="image"></span>
+                                <span class="cartImage"><%= image_tag("products/cart-image.jpg", :class => "media-left media-object", :alt => "cart-Image") %></span>
                               </td>
                               <td class="col-xs-4">Italian Winter Hat</td>
                               <td class="col-xs-2">$ 99.00</td>
@@ -297,7 +290,7 @@
                             <tr>
                               <td class="col-xs-2">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <span class="cartImage"><img src="img/products/cart-image.jpg" alt="image"></span>
+                                <span class="cartImage"><%= image_tag("products/cart-image.jpg", :class => "media-left media-object", :alt => "cart-Image") %></span>
                               </td>
                               <td class="col-xs-4">Italian Winter Hat</td>
                               <td class="col-xs-2">$ 99.00</td>
@@ -307,7 +300,7 @@
                             <tr>
                               <td class="col-xs-2">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <span class="cartImage"><img src="img/products/cart-image.jpg" alt="image"></span>
+                                <span class="cartImage"><%= image_tag("products/cart-image.jpg", :class => "media-left media-object", :alt => "cart-Image") %></span>
                               </td>
                               <td class="col-xs-4">Italian Winter Hat</td>
                               <td class="col-xs-2">$ 99.00</td>
@@ -331,8 +324,8 @@
                   <div class="col-xs-12">
                     <div class="well well-lg clearfix">
                       <ul class="pager">
-                      <li class="previous"><a href="checkout-step-3.html">戻る</a></li>
-                        <li class="next"><a href="checkout-complete.html">購入確定</a></li>
+                      <li class="previous"><a href="checkout_step_2.html">戻る</a></li>
+                        <li class="next"><a href="checkout_complete.html">購入確定</a></li>
                       </ul>
                     </div>
                   </div>
@@ -447,16 +440,5 @@
         </div>
       </div>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="plugins/jquery-ui/jquery-ui.js"></script>
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="plugins/owl-carousel/owl.carousel.js"></script>
-    <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
-    <script src="plugins/countdown/jquery.syotimer.js"></script>
-    <script src="js/custom.js"></script>
-
   </body>
 </html>
