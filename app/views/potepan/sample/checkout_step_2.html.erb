@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Step # 03 - BIGBAG Store</title>
+
+    <!-- PLUGINS CSS STYLE -->
+    <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="plugins/selectbox/select_option1.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="plugins/owl-carousel/owl.carousel.css" media="screen">
+
+    <!-- GOOGLE FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- CUSTOM CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors/default.css" id="option_color">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="main-wrapper">
+
+      <!-- HEADER -->
+      <div class="header clearfix">
+
+        <!-- TOPBAR -->
+        <div class="topBar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 hidden-sm hidden-xs">
+                <ul class="list-inline">
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <ul class="list-inline pull-right">
+                  <li><!-- <span><a data-toggle="modal" href='.login-modal'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span> --></li>
+                  <li class="dropdown searchBox">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <form  id="form01" action="product-grid-left-sidebar.html" method="post">
+                      <li>
+                        <span class="input-group">
+                          <input type="text" name="searchWord" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
+                          <span onclick="FormSubmit();" class="input-group-addon addPointer" id="basic-addon2">検索</span>
+                        </span>
+                      </li>
+                      </form>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="cart-page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i>¥0</a>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li>ショッピングカート</li>
+                      <li>
+                        <a href="single-product.html">
+                          <div class="media">
+                            <img class="media-left media-object" src="img/home/cart-items/cart-item-01.jpg" alt="cart-Image">
+                            <div class="media-body">
+                              <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="single-product.html">
+                          <div class="media">
+                            <img class="media-left media-object" src="img/home/cart-items/cart-item-01.jpg" alt="cart-Image">
+                            <div class="media-body">
+                              <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <div class="btn-group" role="group" aria-label="...">
+                          <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';">カートを見る</button>
+                          <button type="button" class="btn btn-default" onclick="location.href='checkout-step-1.html';">購入する</button>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-main navbar-default" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li class=""><a href="index.html">Home</a></li>
+                <li class="dropdown megaDropMenu">
+                  <a href="product-grid-left-sidebar.html" class="dropdown-toggle">Shop</b></a>
+                </li>
+                <li class="dropdown">
+                  <a href="about-us.html" class="dropdown-toggle">About US</a>
+                </li>
+                <li class="dropdown">
+                  <a href="blog-left-sidebar.html" class="dropdown-toggle">blog</a>
+                </li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div>
+        </nav>
+
+      </div>
+
+      <!-- LIGHT SECTION -->
+      <section class="lightSection clearfix pageHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="page-title">
+                <h2>お支払い方法</h2>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <ol class="breadcrumb pull-right">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li class="active">お支払い方法</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT SECTION -->
+      <section class="mainContent clearfix stepsWrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="innerWrapper clearfix stepsPage">
+                <div class="row progress-wizard" style="border-bottom:0;">
+
+  <div class="col-xs-4 progress-wizard-step complete fullBar">
+                    <div class="text-center progress-wizard-stepnum">お届け先情報</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <i class="progress-wizard-dot"></i>
+                  </div>
+
+                  <div class="col-xs-4 progress-wizard-step active">
+                    <div class="text-center progress-wizard-stepnum">お支払い方法</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <i class="progress-wizard-dot"></i>
+                  </div>
+
+                  <div class="col-xs-4 progress-wizard-step disabled">
+                    <div class="text-center progress-wizard-stepnum">入力内容確認</div>
+                    <div class="progress"><div class="progress-bar"></div></div>
+                    <i class="progress-wizard-dot"></i>
+                  </div>
+
+                </div>
+
+                <form action="" class="row" method="POST" role="form">
+                  <div class="col-xs-12">
+                    <div class="page-header">
+                      <h4>お支払い方法</h4>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-sm-4 col-xs-12">
+                    <label for="">カード番号</label>
+                    <input type="password" class="form-control" id="">
+                  </div>
+                  <div class="form-group col-sm-4 col-xs-12">
+                    <label for="">有効期限</label>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <span class="step-drop">
+                          <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+
+                          </select>
+                        </span>
+                      </div>
+                      <div class="col-xs-6">
+                        <span class="step-drop">
+                          <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                            <option value="0">2016</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                            <option value="4">2020</option>
+                            <option value="5">2021</option>
+                            <option value="6">2022</option>
+                            <option value="7">2023</option>
+                            <option value="8">2024</option>
+                          </select>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group col-sm-4 col-xs-12">
+                    <label for="">カード名義人</label>
+                    <input type="text" class="form-control" id="">
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="well well-lg clearfix">
+                      <ul class="pager">
+                      <li class="previous"><a href="checkout-step-2.html">戻る</a></li>
+                        <li class="next"><a href="checkout-step-4.html">次へ</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <div class="footer clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-2 col-xs-12">
+              <div class="footerLink">
+                <h5>商品をお探しなら</h5>
+                <ul class="list-unstyled">
+                  <li><a href="product-grid-left-sidebar.html">SHOES</a></li>
+                  <li><a href="product-grid-left-sidebar.html">BAGS </a></li>
+                  <li><a href="product-grid-left-sidebar.html">GLASSES </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-2 col-xs-12">
+              <div class="footerLink">
+                <h5>BIGBAGについて</h5>
+                <ul class="list-unstyled">
+                 <li><a href="about-us.html">ABOUT US</a></li>
+                 <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
+                 <li><a href="tokushoho.html">特定商取引法についての表記</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- COPY RIGHT -->
+      <div class="copyRight clearfix">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-7 col-xs-12">
+              <p>&copy; 2017 Copyright Potepan Store .</p>
+            </div>
+            <div class="col-sm-5 col-xs-12">
+              <ul class="list-inline">
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">log in</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="text" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember Me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">log in</button>
+              <button type="button" class="btn btn-link btn-block">Forgot Password?</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="modal-title">Create an account</h3>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" role="form">
+              <div class="form-group">
+                <label for="">Enter Email</label>
+                <input type="email" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" id="">
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.js"></script>
+    <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+    <script src="plugins/countdown/jquery.syotimer.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>
