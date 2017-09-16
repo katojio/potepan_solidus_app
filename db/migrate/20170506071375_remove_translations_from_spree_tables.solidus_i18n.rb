@@ -1,5 +1,5 @@
 # This migration comes from solidus_i18n (originally 20150609154031)
-class RemoveTranslationsFromSpreeTables < ActiveRecord::Migration
+class RemoveTranslationsFromSpreeTables < ActiveRecord::Migration[4.2]
   def up
     # Don't migrate if we still use Globalize, i.e. through spree_globalize Gem
     return if defined?(Globalize)
