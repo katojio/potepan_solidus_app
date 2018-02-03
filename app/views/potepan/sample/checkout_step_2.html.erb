@@ -187,15 +187,15 @@
                   </div>
 
                   <div class="form-group col-sm-4 col-xs-12">
-                    <label for="">カード番号</label>
-                    <input type="password" class="form-control" id="">
+                    <label for="checkout-creditcard-code">カード番号</label>
+                    <input type="password" class="form-control" id="checkout-card-number">
                   </div>
                   <div class="form-group col-sm-4 col-xs-12">
                     <label for="">有効期限</label>
                     <div class="row">
                       <div class="col-xs-6">
                         <span class="step-drop">
-                          <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                          <select name="checkout-card-expiration-month" id="checkout-card-expiration-month" class="select-drop">
                             <option value="1">01</option>
                             <option value="2">02</option>
                             <option value="3">03</option>
@@ -214,7 +214,7 @@
                       </div>
                       <div class="col-xs-6">
                         <span class="step-drop">
-                          <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                          <select name="checkout-card-expiration-year" id="checkout-card-expiration-year" class="select-drop">
                             <option value="0">2016</option>
                             <option value="1">2017</option>
                             <option value="2">2018</option>
@@ -230,8 +230,8 @@
                     </div>
                   </div>
                   <div class="form-group col-sm-4 col-xs-12">
-                    <label for="">カード名義人</label>
-                    <input type="text" class="form-control" id="">
+                    <label for="checkout-card-name">カード名義人</label>
+                    <input type="text" class="form-control" id="checkout-card-name">
                   </div>
                   <div class="col-xs-12">
                     <div class="well well-lg clearfix">
@@ -304,12 +304,12 @@
           <div class="modal-body">
             <form action="" method="POST" role="form">
               <div class="form-group">
-                <label for="">Enter Email</label>
-                <input type="text" class="form-control" id="">
+                <label for="login-email">Enter Email</label>
+                <input type="email" class="form-control" id="login-email">
               </div>
               <div class="form-group">
-                <label for="">Password</label>
-                <input type="password" class="form-control" id="">
+                <label for="login-password">Password</label>
+                <input type="password" class="form-control" id="login-password">
               </div>
               <div class="checkbox">
                 <label>
@@ -335,16 +335,16 @@
           <div class="modal-body">
             <form action="" method="POST" role="form">
               <div class="form-group">
-                <label for="">Enter Email</label>
-                <input type="email" class="form-control" id="">
+                <label for="signup-email">Enter Email</label>
+                <input type="email" class="form-control" id="signup-email">
               </div>
               <div class="form-group">
-                <label for="">Password</label>
-                <input type="password" class="form-control" id="">
+                <label for="signup-password">Password</label>
+                <input type="password" class="form-control" id="signup-password">
               </div>
               <div class="form-group">
-                <label for="">Confirm Password</label>
-                <input type="password" class="form-control" id="">
+                <label for="signup-password-confirmation">Confirm Password</label>
+                <input type="password" class="form-control" id="signup-password-confirmation">
               </div>
               <button type="submit" class="btn btn-primary btn-block">Sign up</button>
             </form>
