@@ -1,0 +1,48 @@
+version: "3"
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+    networks:
+      - default
+    ports:
+      - '33306:3306'
+    volumes:
+      - mysql-data:/var/lib/mysql
+  redis:
+    image: redis:alpine
+    networks:
+      - default
+    ports:
+      - '36379:6379'
+    volumes:
+      - redis-data:/var/lib/redis
+  potepanec:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: password
+      MYSQL_HOST: mysql
+      REDIS_URL: "redis://redis:6379"
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - default
+    volumes:
+      - .:/potepanec
+      - vendor_bundle:/potepanec/vendor/bundle
+      - vendor_assets:/potepanec/vendor/assets
+      - node_modules:/potepanec/node_modules
+
+volumes:
+  mysql-data:
+  redis-data:
+  vendor_bundle:
+  vendor_assets:
+  node_modules:
