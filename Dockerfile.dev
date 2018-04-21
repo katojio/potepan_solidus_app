@@ -17,4 +17,5 @@ RUN apt-get update \
 
 ENTRYPOINT [ \
   "prehook", "ruby -v", "--", \
-  "prehook", "bundle install -j3 --quiet --path vendor/bundle", "--", ]
+  "prehook", "bundle install -j3 --quiet --path vendor/bundle", "--" \
+]
