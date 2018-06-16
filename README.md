@@ -16,9 +16,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 オープンソースの[RDBMS](https://ja.wikipedia.org/wiki/%E9%96%A2%E4%BF%82%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0) MySQL をインストールします。
 
 ```
-brew install mysql
+brew install mysql@5.7
 brew tap homebrew/services
-brew services start mysql
+brew services start mysql@5.7
 ```
 ### ImageMagick のインストール
 画像変換ツールの ImageMagick をインストールします。
