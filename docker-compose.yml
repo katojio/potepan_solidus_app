@@ -36,12 +36,16 @@ services:
       - default
     volumes:
       - .:/potepanec
+      - /potepanec/log
+      - /potepanec/tmp
+      - /potepanec/vendor/bundle
       - vendor_bundle:/potepanec/vendor/bundle
       - vendor_assets:/potepanec/vendor/assets
       - node_modules:/potepanec/node_modules
+      - public_spree:/potepanec/public/spree
     tty: true
     stdin_open: true
-    command: /bin/bash -l
+    command: bundle exec rails server
 
 volumes:
   mysql-data:
@@ -49,3 +53,4 @@ volumes:
   vendor_bundle:
   vendor_assets:
   node_modules:
+  public_spree:
