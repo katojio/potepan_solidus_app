@@ -51,12 +51,12 @@ type rbenv
 `#=> "rbenv is a function"` と表示されれば正しくインストールされています。
 
 
-### ruby 2.4.1 のインストール
+### ruby 2.4.4 のインストール
 
 ターミナルで下記コマンドを実行します
 
 ```
-rbenv install 2.4.1
+rbenv install 2.4.4
 ```
 
 ### プロジェクトのフォーク
