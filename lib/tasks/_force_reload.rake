@@ -1,3 +1,5 @@
+# rubocop:disable all
+
 require 'generators/spree/install/install_generator.rb'
 
 module AssetSetupTask
@@ -132,3 +134,6 @@ module AssetSetupTask
     end
   end
 end
+
+# rubocop:disable all
+

@@ -51,12 +51,12 @@ type rbenv
 `#=> "rbenv is a function"` と表示されれば正しくインストールされています。
 
 
-### ruby 2.4.4 のインストール
+### ruby 2.5.1 のインストール
 
 ターミナルで下記コマンドを実行します
 
 ```
-rbenv install 2.4.4
+rbenv install 2.5.1
 ```
 
 ### プロジェクトのフォーク
@@ -101,11 +101,8 @@ bundle install
 ターミナルで下記コマンドを実行します
 
 ```bash
-bundle exec rake db:create
-bundle exec rake db:migrate
-bundle exec rake db:seed
 bundle exec rails g spree:install
-bundle exec rake spree_sample:load
+bundle exec rails g solidus:auth:install
 ```
 
 ### 動作確認
