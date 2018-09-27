@@ -1,7 +1,15 @@
 version: "3"
+volumes:
+  mysql_8_0-data:
+  redis-data:
+  vendor_bundle_2_5_1:
+  vendor_assets_2_7:
+  node_modules:
+  public_spree_2_7:
+
 services:
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: password
     networks:
@@ -9,7 +17,7 @@ services:
     ports:
       - '33306:3306'
     volumes:
-      - mysql-data:/var/lib/mysql
+      - mysql_8_0-data:/var/lib/mysql
   redis:
     image: redis:alpine
     networks:
@@ -36,21 +44,14 @@ services:
       - default
     volumes:
       - .:/potepanec
+      # https://qiita.com/shotat/items/57d049793605ffc20135
       - /potepanec/log
       - /potepanec/tmp
       - /potepanec/vendor/bundle
-      - vendor_bundle:/potepanec/vendor/bundle
-      - vendor_assets:/potepanec/vendor/assets
+      - vendor_bundle_2_5_1:/potepanec/vendor/bundle
+      - vendor_assets_2_7:/potepanec/vendor/assets
       - node_modules:/potepanec/node_modules
-      - public_spree:/potepanec/public/spree
+      - public_spree_2_7:/potepanec/public/spree
     tty: true
     stdin_open: true
     command: bundle exec rails server
-
-volumes:
-  mysql-data:
-  redis-data:
-  vendor_bundle:
-  vendor_assets:
-  node_modules:
-  public_spree:
