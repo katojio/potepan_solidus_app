@@ -81,7 +81,7 @@ rbenv install 2.5.1
 例：
 
 ```
-git clone https://motchang@bitbucket.org/motchang/potepanec.git
+git clone https://[your_account_name]@bitbucket.org/[your_account_name]/potepanec.git
 ```
 
 ### ライブラリのインストール
