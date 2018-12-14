@@ -56,15 +56,6 @@ git clone https://[your_account_name]@bitbucket.org/[your_account_name]/potepane
 docker-compose up --build
 ```
 
-### データベースの作成と最新状態へ移行
-
-ターミナルで下記コマンドを実行します
-
-```bash
-docker-compose exec potepanec bundle exec rails g spree:install
-docker-compose exec potepanec bundle exec rails g solidus:auth:install
-```
-
 ### 動作確認
 
 以下のURLを開き、例のような画面が表示されれば正常に動作しています。
