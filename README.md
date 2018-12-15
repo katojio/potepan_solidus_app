@@ -64,5 +64,12 @@ http://localhost:3000/potepan/index.html
 
 ![](docs/images/installation/first_view.png)
 
+### Dockerを使いこなそう！
+
+今後、Dokerを使用しながら課題を進めていくことになります。
+Dockerを使いこなせるようになりましょう。
+
+[Dockerを使いこなそう](https://potepan.gitbook.io/camp/be_a_professional_developer/manage_docker)
+
 ### Dockerを利用しない開発環境の構築
 スペック不足など、何らかの理由でDockerでの開発が困難な場合は[こちら](./WITHOUTDOCKER.md)を参考に開発環境をセットアップしてください。
