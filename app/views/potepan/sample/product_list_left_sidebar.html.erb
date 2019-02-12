@@ -39,56 +39,26 @@
                 <ul class="list-inline">
                   <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                   <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                  <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-xs-12">
                 <ul class="list-inline pull-right">
-                  <li><span><a data-toggle="modal" href='#login'>Log in</a><small>or</small><a data-toggle="modal" href='#signup'>Create an account</a></span></li>
+                  <li><!-- <span><a data-toggle="modal" href='.login-modal'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span> --></li>
                   <li class="dropdown searchBox">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
                     <ul class="dropdown-menu dropdown-menu-right">
+                      <form  id="form01" action="product-grid-left-sidebar.html" method="post">
                       <li>
                         <span class="input-group">
-                          <input type="text" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
-                          <span class="input-group-addon" id="basic-addon2">Search</span>
+                          <input type="text" name="searchWord" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
+                          <span onclick="FormSubmit();" class="input-group-addon addPointer" id="basic-addon2">検索</span>
                         </span>
                       </li>
+                      </form>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i>$0</a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <li>Item(s) in your cart</li>
-                      <li>
-                        <a href="#">
-                          <div class="media">
-                            <%= image_tag("img/home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
-                            <div class="media-body">
-                              <h5 class="media-heading">INCIDIDUNT UT <br><span>2 X $199</span></h5>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div class="media">
-                            <%= image_tag("img/home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
-                            <div class="media-body">
-                              <h5 class="media-heading">INCIDIDUNT UT <br><span>2 X $199</span></h5>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <div class="btn-group" role="group" aria-label="...">
-                          <button type="button" class="btn btn-default">Shopping Cart</button>
-                          <button type="button" class="btn btn-default">Checkout</button>
-                        </div>
-                      </li>
-                    </ul>
+                    <a href="cart-page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i></a>
                   </li>
                 </ul>
               </div>
@@ -150,42 +120,6 @@
                     <li class="col-sm-3 col-xs-12">
                       <a href="#" class="menu-photo"><%= image_tag("img/menu-photo.jpg", :alt => "menu-img") %></a>
                     </li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">pages</a>
-                  <ul class="dropdown-menu dropdown-menu-left">
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li><a href="signup.html">Register</a></li>
-                    <li><a href="signup-login.html">Register or Login</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="lost-password.html">Password Recovery</a></li>
-                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
-                    <li><a href="404.html">404 Not Found</a></li>
-                    <li><a href="coming-soon.html">Coming Soon</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">blog</a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="blog_right_sidebar.html">Right Sidebar</a></li>
-                    <li><a href="blog_left_sidebar.html">Left Sidebar</a></li>
-                    <li><a href="blog-fullwidth.html">Full Width</a></li>
-                    <li><a href="blog-single-fullwidth.html">Single Post</a></li>
-                    <li><a href="blog_single_right_sidebar.html">Single Right Sidebar</a></li>
-                    <li><a href="blog_single_left_sidebar.html">Single Left Sidebar</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
-                  <ul class="dropdown-menu dropdown-menu-right">
-                    <li><a href="account-dashboard.html">Dashboard</a></li>
-                    <li><a href="account-profile.html">Profile</a></li>
-                    <li><a href="account-all-orders.html">All Orders</a></li>
-                    <li><a href="account-single-order.html">Single Order</a></li>
-                    <li><a href="account-wishlist.html">Wishlist</a></li>
-                    <li><a href="account-address.html">Address</a></li>
                   </ul>
                 </li>
               </ul>
@@ -277,22 +211,7 @@
                   </div>
                 </div>
               </div>
-              <div class="panel panel-default priceRange">
-                <div class="panel-heading">Filter by Price</div>
-                <div class="panel-body clearfix">
-                  <div class="price-slider-inner">
-                    <span class="amount-wrapper">
-                      Price:
-                      <input type="text" id="price-amount-1" readonly>
-                      <strong>-</strong>
-                      <input type="text" id="price-amount-2" readonly>
-                    </span>
-                    <div id="price-range"></div>
-                  </div>
-                  <input class="btn btn-default" type="submit" value="Filter">
-                  <!-- <span class="priceLabel">Price: <strong>$12 - $30</strong></span> -->
-                </div>
-              </div>
+
               <div class="panel panel-default filterNormal">
                 <div class="panel-heading">filter by Color</div>
                 <div class="panel-body">
@@ -346,10 +265,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -363,10 +278,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -380,10 +291,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -397,10 +304,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -414,10 +317,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -431,10 +330,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -448,10 +343,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -465,10 +356,6 @@
                       <h4 class="media-heading"><a href="single-product.html">Dip Dyed Sweater</a></h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                       <h3>$249</h3>
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target=".login-modal"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -531,84 +418,17 @@
       </section>
 
       <!-- FOOTER -->
-      <div class="footer clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>Accessories</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">Body care </a></li>
-                  <li><a href="#">Chambray </a></li>
-                  <li><a href="#">Floral </a></li>
-                  <li><a href="#">Rejuvination </a></li>
-                  <li><a href="#">Shaving </a></li>
-                  <li><a href="#">Toilette </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>BRANDS</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">Barbour </a></li>
-                  <li><a href="#">Brioni </a></li>
-                  <li><a href="#">Oliver Spencer</a></li>
-                  <li><a href="#">Belstaff</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>Accessories</h5>
-                <ul class="list-unstyled">
-                  <li><a href="#">Body care </a></li>
-                  <li><a href="#">Chambray </a></li>
-                  <li><a href="#">Floral </a></li>
-                  <li><a href="#">Rejuvination </a></li>
-                  <li><a href="#">Shaving </a></li>
-                  <li><a href="#">Toilette </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>Get in Touch</h5>
-                <ul class="list-unstyled">
-                  <li>Call us at (555)-555-5555</li>
-                  <li><a href="mailto:support@iamabdus.com">support@iamabdus.com</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-4 col-xs-12">
-              <div class="newsletter clearfix">
-                <h4>Newsletter</h4>
-                <h3>Sign up now</h3>
-                <p>Enter your email address and get notified about new products. We hate spam!</p>
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="your email address" aria-describedby="basic-addon2">
-                  <a href="#" class="input-group-addon" id="basic-addon2">go <i class="glyphicon glyphicon-chevron-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- COPY RIGHT -->
-      <div class="copyRight clearfix">
+      <div id="footer" class="copyRight clearfix">
         <div class="container">
           <div class="row">
             <div class="col-sm-7 col-xs-12">
-              <p>&copy; 2016 Copyright Bigbag Store Bootstrap Template by <a target="_blank" href="http://www.iamabdus.com/">Abdus</a>.</p>
+              <p>&copy; 2016-<%= Time.now.year %> Copyright Potepan Store .</p>
             </div>
             <div class="col-sm-5 col-xs-12">
               <ul class="list-inline">
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
               </ul>
             </div>
           </div>
@@ -617,7 +437,7 @@
     </div>
 
     <!-- LOGIN MODAL -->
-    <div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
+    <div class="modal fade" id="login" tabindex="-1" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -671,46 +491,6 @@
               </div>
               <button type="submit" class="btn btn-primary btn-block">Sign up</button>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PORDUCT QUICK VIEW MODAL -->
-    <div class="modal fade quick-view" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <div class="media">
-              <div class="media-left">
-                <%= image_tag("img/products/quick-view/quick-view-01.jpg", :class => "media-object", :alt => "Image") %>
-              </div>
-              <div class="media-body">
-                <h2>Old Skool Navy</h2>
-                <h3>$149</h3>
-                <p>Classic sneaker from Vans. Cotton canvas and suede upper. Textile lining with heel stabilizer and ankle support. Contrasting laces. Sits on a classic waffle rubber sole.</p>
-                <span class="quick-drop">
-                  <select name="guiest_id3" id="guiest_id3" class="select-drop">
-                    <option value="0">Size</option>
-                    <option value="1">Size 1</option>
-                    <option value="2">Size 2</option>
-                    <option value="3">Size 3</option>
-                  </select>
-                </span>
-                <span class="quick-drop resizeWidth">
-                  <select name="guiest_id4" id="guiest_id4" class="select-drop">
-                    <option value="0">Qty</option>
-                    <option value="1">Qty 1</option>
-                    <option value="2">Qty 2</option>
-                    <option value="3">Qty 3</option>
-                  </select>
-                </span>
-                <div class="btn-area">
-                  <a href="#" class="btn btn-primary btn-block">Add to cart <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
