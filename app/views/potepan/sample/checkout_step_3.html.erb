@@ -59,36 +59,7 @@
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="cart-page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i>¥0</a>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                      <li>ショッピングカート</li>
-                      <li>
-                        <a href="single-product.html">
-                          <div class="media">
-                            <%= image_tag("home/cart-items/cart-item-01.jpg", :class => "media-left media-object", :alt => "cart-Image") %>
-                            <div class="media-body">
-                              <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="single-product.html">
-                          <div class="media">
-                            <img class="media-left media-object" src="img/home/cart-items/cart-item-01.jpg" alt="cart-Image">
-                            <div class="media-body">
-                              <h5 class="media-heading">商品名 <br><span>2 X 1990円</span></h5>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <div class="btn-group" role="group" aria-label="...">
-                          <button type="button" class="btn btn-default" onclick="location.href='cart-page.html';">カートを見る</button>
-                          <button type="button" class="btn btn-default" onclick="location.href='checkout_step_1.html';">購入する</button>
-                        </div>
-                      </li>
-                    </ul>
+                    <a href="cart-page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i></a>
                   </li>
                 </ul>
               </div>
@@ -116,12 +87,6 @@
                 <li class=""><a href="index.html">Home</a></li>
                 <li class="dropdown megaDropMenu">
                   <a href="product-grid-left-sidebar.html" class="dropdown-toggle">Shop</b></a>
-                </li>
-                <li class="dropdown">
-                  <a href="about-us.html" class="dropdown-toggle">About US</a>
-                </li>
-                <li class="dropdown">
-                  <a href="blog-left-sidebar.html" class="dropdown-toggle">blog</a>
                 </li>
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -216,7 +181,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-sm-6 col-xs-12">
+                  <!-- <div class="col-sm-6 col-xs-12">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">お支払い方法</h4>
@@ -227,8 +192,8 @@
                         </address>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6 col-xs-12">
+                  </div> -->
+                  <!-- <div class="col-sm-6 col-xs-12">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">お届け方法</h4>
@@ -239,8 +204,8 @@
                         </address>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-xs-12">
+                  </div> -->
+                  <!-- <div class="col-xs-12">
                     <div class="panel panel-default">
                       <div class="panel-heading">
                         <h4 class="panel-title">注文詳細</h4>
@@ -262,7 +227,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-xs-12">
                     <div class="cartListInner">
                       <div class="table-responsive">
@@ -337,38 +302,12 @@
       </section>
 
       <!-- FOOTER -->
-      <div class="footer clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>商品をお探しなら</h5>
-                <ul class="list-unstyled">
-                  <li><a href="product-grid-left-sidebar.html">SHOES</a></li>
-                  <li><a href="product-grid-left-sidebar.html">BAGS </a></li>
-                  <li><a href="product-grid-left-sidebar.html">GLASSES </a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-2 col-xs-12">
-              <div class="footerLink">
-                <h5>BIGBAGについて</h5>
-                <ul class="list-unstyled">
-                 <li><a href="about-us.html">ABOUT US</a></li>
-                 <li><a href="privacy-policy.html">プライバシーポリシー</a></li>
-                 <li><a href="tokushoho.html">特定商取引法についての表記</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- COPY RIGHT -->
-      <div class="copyRight clearfix">
+      <div id="footer" class="copyRight clearfix">
         <div class="container">
           <div class="row">
             <div class="col-sm-7 col-xs-12">
-              <p>&copy; 2017 Copyright Potepan Store .</p>
+              <p>&copy; 2016-<%= Time.now.year %> Copyright Potepan Store .</p>
             </div>
             <div class="col-sm-5 col-xs-12">
               <ul class="list-inline">
