@@ -44,20 +44,22 @@
               </div>
               <div class="col-md-6 col-xs-12">
                 <ul class="list-inline pull-right">
-                 <!--  <li><span><a data-toggle="modal" href='.login-modal'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span></li> -->
+                  <li><!-- <span><a data-toggle="modal" href='.login-modal'>ログイン</a><small>or</small><a data-toggle="modal" href='#signup'>新規登録</a></span> --></li>
                   <li class="dropdown searchBox">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
                     <ul class="dropdown-menu dropdown-menu-right">
+                      <form  id="form01" action="product-grid-left-sidebar.html" method="post">
                       <li>
                         <span class="input-group">
-                          <input type="text" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
-                          <span class="input-group-addon" id="basic-addon2">検索</span>
+                          <input type="text" name="searchWord" class="form-control" placeholder="Search…" aria-describedby="basic-addon2">
+                          <span onclick="FormSubmit();" class="input-group-addon addPointer" id="basic-addon2">検索</span>
                         </span>
                       </li>
+                      </form>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a href="cart_page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i><!--¥0 --></a>
+                    <a href="cart-page.html" class="dropdown-toggle" data-toggle="dropdown disabled"><i class="fa fa-shopping-cart"></i></a>
                   </li>
                 </ul>
               </div>
@@ -340,6 +342,7 @@
         </div>
       </section>
 
+      <!-- FOOTER -->
       <!-- COPY RIGHT -->
       <div class="copyRight clearfix">
         <div class="container">
