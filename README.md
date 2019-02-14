@@ -64,6 +64,47 @@ http://localhost:3000/potepan/index.html
 
 ![](docs/images/installation/first_view.png)
 
+### 動作停止
+上記（docker-compose up を実行してログが標準出力中のターミナル）で表示した画面を停止し開発を中断するときにはターミナルでctrl+cを押し、更に下記コマンドを実行します
+
+```bash
+docker-compose stop
+```
+同時にイメージやボリュームを削除したい場合は以下の down を利用します。
+
+```bash
+docker-compose down
+```
+### 動作再開
+
+再度開発を進める場合、下記コマンドを実行しDockerを起動します。
+
+```bash
+# Dockerコンテナを起動
+docker-compose up -d
+
+# コンテナ内にSSH接続
+docker-compose exec potepanec bash
+
+# Railsを起動
+bundle exec rails s -p 3000 -b '0.0.0.0'
+```
+### 管理者権限を持ったユーザーの作成
+localhost:3000/admin/にアクセスしデータベース機能を操作する場合、管理者権限を持ったユーザーの作成が必要となります。
+以下のコマンドを実行し、ご自身のメールアドレスとパスワードを設定し、アカウントを作成してください。
+
+```bash
+bundler exec rake spree_auth:admin:create
+
+# Create the admin user (press enter for defaults).
+# Email [admin@example.com]:
+# Password [test123]:
+```
+
+### トラブルシューティング
+#### Railsが起動しない
+もしbundle exec rails s -p 3000 -b '0.0.0.0'のコマンドでRailsが立ち上がらない場合 すでに起動中になってしまって2重で立ち上げようとして失敗している可能性があるので、tmp/pids/server.pidが存在している場合は削除して再度起動してみてください。
+
 ### Dockerを使いこなそう！
 
 今後、Dokerを使用しながら課題を進めていくことになります。
