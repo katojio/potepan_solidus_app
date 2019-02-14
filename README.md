@@ -91,6 +91,7 @@ bundle exec rails s -p 3000 -b '0.0.0.0'
 ```
 ### 管理者権限を持ったユーザーの作成
 http://localhost:3000/admin/ にアクセスしデータベース機能を操作する場合、管理者権限を持ったユーザーの作成が必要となります。
+
 以下のコマンドを実行し、ご自身のメールアドレスとパスワードを設定し、アカウントを作成してください。
 
 ```bash
@@ -100,17 +101,23 @@ bundler exec rake spree_auth:admin:create
 # Email [admin@example.com]:
 # Password [test123]:
 ```
-![管理者画面 : 商品一覧](docs/images/installation/first_view.png "管理者画面 : 商品一覧")
+
+![管理者画面 : 商品一覧](docs/images/installation/admin_screen.png "管理者画面 : 商品一覧")
 
 予め開発で使用する商品画像などは用意されていますが、こちらの管理画面から自分で商品を登録することもできます。
+
 ぜひ入力・データの出力など色々と試し、データベースの使い方などに慣れて行きましょう。
 
 こちらも参考にしてみてください。
-[Solidus の管理画面を操作してみましょう]https://potepan.gitbook.io/camp/before_camp
+[Solidus の管理画面を操作してみましょう](https://potepan.gitbook.io/camp/before_camp)
 
 ### トラブルシューティング
 #### Railsが起動しない
-もしbundle exec rails s -p 3000 -b '0.0.0.0'のコマンドでRailsが立ち上がらない場合 すでに起動中になってしまって2重で立ち上げようとして失敗している可能性があるので、tmp/pids/server.pidが存在している場合は削除して再度起動してみてください。
+もしbundle exec rails s -p 3000 -b '0.0.0.0'のコマンドでRailsが立ち上がらない場合
+
+ すでに起動中になってしまって2重で立ち上げようとして失敗している可能性があるので、
+
+ tmp/pids/server.pidが存在している場合は削除して再度起動してみてください。
 
 ### Dockerを使いこなそう！
 
