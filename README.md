@@ -79,6 +79,22 @@ docker-compose down
 
 再度開発を進める場合、下記コマンドを実行しDockerを起動します。
 
+#### コンテナ内に入らず開発を再開したい場合（ログを確認しつつ開発したい場合）
+
+```bash
+# Dockerコンテナを起動
+docker-compose up
+
+# 動作停止
+ctrl+c
+
+# コンテナを停止
+docker-compose stop
+```
+
+
+#### コンテナ内に入り開発したい場合
+
 ```bash
 # Dockerコンテナを起動
 docker-compose up -d
@@ -86,9 +102,28 @@ docker-compose up -d
 # コンテナ内にSSH接続
 docker-compose exec potepanec bash
 
-# Railsを起動
-bundle exec rails s -p 3000 -b '0.0.0.0'
+# コンテナ内から抜ける
+exit
+
+# コンテナを停止
+docker-compose stop
 ```
+
+### トラブルシューティング
+#### Railsが起動しない
+```bash
+もし「A server is already running. Check /app/tmp/pids/server.pid.」のエラーでRailsが立ち上がらない場合、
+すでに起動中になってしまって2重で立ち上げようとして失敗している可能性があるので、tmp/pids/server.pidが存在している場合は削除して再度起動してみてください。
+
+原因の多くは作業を中断する際、docker-composeの動作停止（ctrl+c）のみを行い、docker-compose stop を行わず、再開時にdocker-compose upで立ち上げてしまい二重立ち上げの警告が出る事が多いです。
+```
+### Dockerを使いこなそう！
+
+今後、Dokerを使用しながら課題を進めていくことになります。
+Dockerを使いこなせるようになりましょう。
+
+[Dockerを使いこなそう](https://potepan.gitbook.io/camp/be_a_professional_developer/manage_docker)
+
 ### 管理者権限を持ったユーザーの作成
 http://localhost:3000/admin/ にアクセスしデータベース機能を操作する場合、管理者権限を持ったユーザーの作成が必要となります。
 
@@ -105,26 +140,11 @@ bundler exec rake spree_auth:admin:create
 ![管理者画面 : 商品一覧](docs/images/installation/admin_screen.png "管理者画面 : 商品一覧")
 
 予め開発で使用する商品画像などは用意されていますが、こちらの管理画面から自分で商品を登録することもできます。
-
 ぜひ入力・データの出力など色々と試し、データベースの使い方などに慣れて行きましょう。
 
 こちらも参考にしてみてください。
 [Solidus の管理画面を操作してみましょう](https://potepan.gitbook.io/camp/before_camp)
 
-### トラブルシューティング
-#### Railsが起動しない
-もしbundle exec rails s -p 3000 -b '0.0.0.0'のコマンドでRailsが立ち上がらない場合
-
- すでに起動中になってしまって2重で立ち上げようとして失敗している可能性があるので、
-
- tmp/pids/server.pidが存在している場合は削除して再度起動してみてください。
-
-### Dockerを使いこなそう！
-
-今後、Dokerを使用しながら課題を進めていくことになります。
-Dockerを使いこなせるようになりましょう。
-
-[Dockerを使いこなそう](https://potepan.gitbook.io/camp/be_a_professional_developer/manage_docker)
 
 ### Dockerを利用しない開発環境の構築
 スペック不足など、何らかの理由でDockerでの開発が困難な場合は[こちら](./WITHOUTDOCKER.md)を参考に開発環境をセットアップしてください。
