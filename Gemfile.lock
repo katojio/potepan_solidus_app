@@ -385,7 +385,7 @@ DEPENDENCIES
   rails-erd
   rspec-rails
   sass-rails (~> 5.0)
-  solidus
+  solidus (~> 2.7.0)
   solidus_auth_devise
   solidus_i18n!
   spring
