@@ -4,7 +4,9 @@ module Potepan
   # products_controller
   class ProductsController < ApplicationController
     def single_product
-      render 'potepan/single_product'
+      @product  = Spree::Product.find(params[:id])
+      @variant = Spree::Variant.find_by(product_id: @product.id)
+      @images    = Spree::Image.where(viewable_id: @variant.id)
     end
 
   end

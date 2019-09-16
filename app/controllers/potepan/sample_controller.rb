@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Potepan
+module Potepan
   # sample_controller
   class SampleController < ApplicationController
     def index; end
