@@ -1,0 +1,11 @@
+<% if picture_size == "large" %>
+  <% if image_counter == 0 %>
+    <div class="item active" data-thumb="0">
+  <% else %>
+    <div class="item" data-thumb=<%= "#{image_counter}" %> >
+  <% end %>
+    <%= image_tag("/spree/products/#{image.id}/large/#{image.attachment_file_name}") %>
+  </div>
+<% elsif picture_size == "small" %>
+  <div data-target="#carousel" data-slide-to=<%= "#{image_counter}" %> class="thumb"><%= image_tag("/spree/products/#{image.id}/small/#{image.attachment_file_name}") %></div>
+<% end %>
