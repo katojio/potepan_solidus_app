@@ -76,7 +76,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="index.html"><%= image_tag("img/logo.png", :alt => "") %></a>
+              <a class="navbar-brand" href="../index.html"><%= image_tag("img/logo.png", :alt => "") %></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -215,48 +215,9 @@
                 <h4>関連商品</h4>
               </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="productBox">
-                <div class="productImage clearfix">
-                  <%= image_tag("img/products/products-01.jpg", :alt => "products-img") %>
-                </div>
-                <div class="productCaption clearfix">
-                 <h5>Nike Sportswear</h5>
-                 <h3>199円</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="productBox">
-                <div class="productImage clearfix">
-                  <%= image_tag("img/products/products-02.jpg", :alt => "products-img") %>
-                </div>
-                <div class="productCaption clearfix">
-                 <h5>Dip Dyed Sweater</h5>
-                 <h3>249円</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="productBox">
-                <div class="productImage clearfix">
-                  <%= image_tag("img/products/products-03.jpg", :alt => "products-img") %>
-                </div>
-                <div class="productCaption clearfix">
-                 <h5>Scarf Ring Corner</h5>
-                 <h3>179円</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-              <div class="productBox">
-                <div class="productImage clearfix">
-                  <%= image_tag("img/products/products-04.jpg", :alt => "products-img") %>
-                </div>
-                <div class="productCaption clearfix">
-                 <h5>Sun Buddies</h5>
-                 <h3>149円</h3>
-                </div>
+            <div class="col-xs-12">
+              <div class="owl-carousel featuredProductsSlider">
+                <%= render partial: "related_image", collection: @related_images  %>
               </div>
             </div>
           </div>

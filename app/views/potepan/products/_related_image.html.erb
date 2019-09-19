@@ -1,0 +1,12 @@
+<% i = related_image_counter %>
+<div class="slide">
+  <div class="productImage clearfix">
+    <%= image_tag("/spree/products/#{related_image.id}/large/#{related_image.attachment_file_name}", :alt => "featured-product-img") %>
+  </div>
+  <div class="productCaption clearfix">
+    <a href="single_product.html">
+      <h5><%= @products[i].name %></h5>
+    </a>
+    <h3><%= @products[i].price %>$</h3>
+  </div>
+</div>
