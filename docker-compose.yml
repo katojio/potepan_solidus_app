@@ -47,7 +47,6 @@ services:
       # https://qiita.com/shotat/items/57d049793605ffc20135
       - /potepanec/log
       - /potepanec/tmp
-      #- /potepanec/vendor/bundle
       - vendor_bundle_2_5_1:/potepanec/vendor/bundle
       - vendor_assets_2_7:/potepanec/vendor/assets
       - node_modules:/potepanec/node_modules
