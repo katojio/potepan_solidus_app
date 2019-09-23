@@ -5,7 +5,7 @@
           <div class="row">
             <div class="col-xs-6">
               <div class="page-title">
-                <h2>Single Product</h2>
+                <h2><%= @product.name %></h2>
               </div>
             </div>
             <div class="col-xs-6">
@@ -13,7 +13,7 @@
                 <li>
                   <%= link_to("Home", potepan_index_url) %>
                 </li>
-                <li class="active">Single Product</li>
+                <li class="active"><%= @product.name %></li>
               </ol>
             </div>
           </div>
@@ -51,9 +51,9 @@
                     <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
                   </ul>
                   <h2><%= @product.name %></h2>
-                  <h3><%= @product.price %>$</h3>
+                  <h3><%= @product.display_price %></h3>
                   <p><%= @product.description %></p>
-                  <% if @product.id == 3 %>
+                  <% if @variants.count >= 2 %>
                     <span class="quick-drop">
                       <select name="guiest_id3" id="guiest_id3" class="select-drop" data-remote="true">
                         <option value="0">-</option>

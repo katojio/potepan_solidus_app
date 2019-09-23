@@ -2,7 +2,8 @@ module Potepan
   class ProductsController < ApplicationController
     def show
       @product  ||= Spree::Product.find(params[:id])
-      @variant    = Spree::Variant.find_by(product_id: @product.id)
+      @variants   = Spree::Variant.where(product_id: @product.id)
+      @variant    = @variants.first
       @images     = Spree::Image.where(viewable_id: @variant.id)
 
       # Search related images
