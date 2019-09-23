@@ -1,0 +1,16 @@
+inherit_from:
+  - .rubocop_airbnb.yml
+  - .rubocop_todo.yml
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Exclude:
+    - 'db/**/*'
+    - 'config/environments/*'
+    - 'config/initializers/*'
+
+Style/RedundantReturn:
+  Exclude:
+    - 'app/controllers/potepan/products_controller.rb'

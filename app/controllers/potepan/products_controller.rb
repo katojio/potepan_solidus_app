@@ -1,10 +1,5 @@
-# frozen_string_literal: true
-
 module Potepan
-  # products_controller
   class ProductsController < ApplicationController
-    # GET /potepan/products/:id
-    # params[:id]
     def single_product
       @product  ||= Spree::Product.find(params[:id])
       @variant    = Spree::Variant.find_by(product_id: @product.id)
@@ -57,10 +52,6 @@ module Potepan
       end
     end
 
-    # rubocop:disable Style/RedundantReturn
-
-    # GET/potepan/products/:id/edit_l_pic
-    # params[:id], params[:variant_id]
     def single_product_edit_l_pic
       @product  ||= Spree::Product.find(params[:id])
       @variant    = Spree::Variant.find(params[:variant_id])
@@ -70,8 +61,6 @@ module Potepan
                      locals: { picture_size: 'large' })
     end
 
-    # GET/potepan/products/:id/edit_s_pic
-    # params[:id], params[:variant_id]
     def single_product_edit_s_pic
       @product  ||= Spree::Product.find(params[:id])
       @variant    = Spree::Variant.find(params[:variant_id])
@@ -80,6 +69,5 @@ module Potepan
       return (render partial: 'image', collection: @images,
                      locals: { picture_size: 'small' })
     end
-    # rubocop:enable Style/RedundantReturn
   end
 end
