@@ -94,7 +94,7 @@
             </div>
             <div class="col-xs-12">
               <div class="owl-carousel featuredProductsSlider">
-                <%= render partial: "related_image", collection: @related_images  %>
+                <%= render partial: "related_image", collection: @related_images, locals: {products: @products}  %>
               </div>
             </div>
           </div>

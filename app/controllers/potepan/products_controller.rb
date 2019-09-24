@@ -39,11 +39,17 @@ module Potepan
 
       # Get related images by product_ids
       product_ids.each do |p|
-        @products << Spree::Product.find(p)
-        variants  << Spree::Variant.find_by(product_id: p)
+        product = Spree::Product.find(p)
+        unless @products.include?(product)
+          @products << product
+          variants  << Spree::Variant.find_by(product_id: p)
+        end
       end
       variants.each do |v|
-        @related_images << Spree::Image.find_by(viewable_id: v.id)
+        image = Spree::Image.find_by(viewable_id: v.id)
+        unless @related_images.include?(image)
+          @related_images << image
+        end
       end
 
       # JavaScript
