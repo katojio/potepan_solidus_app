@@ -1,0 +1,33 @@
+$(function() {
+
+  let variant_id = 0;
+
+  $('#guiest_id4').change( function() {
+    let select_color = $(this).val();
+
+    if (select_color == 0) {
+      variant_id = 3;
+    } else if (select_color == 1) {
+      variant_id = 10;
+    } else if (select_color == 2) {
+      variant_id = 11;
+    } else if (select_color == 3) {
+      variant_id = 12;
+    }
+
+    // Change large picture
+    $.get("3/edit_l_pic", {
+      variant_id: variant_id
+    }, function(data) {
+      $("#picture_large").html(data);
+    });
+
+    // Change small picture
+    $.get("3/edit_s_pic", {
+      variant_id: variant_id
+    }, function(data) {
+      $("#picture_small").html(data);
+    });
+
+  });
+});
