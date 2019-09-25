@@ -1,183 +1,102 @@
 <% provide(:title, "Single Product") %>
-      <!-- LIGHT SECTION -->
-      <section class="lightSection clearfix pageHeader">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-6">
-              <div class="page-title">
-                <h2><%= @product.name %></h2>
+<!-- LIGHT SECTION -->
+<section class="lightSection clearfix pageHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="page-title">
+          <h2><%= @product.name %></h2>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <ol class="breadcrumb pull-right">
+          <li>
+            <%= link_to("Home", potepan_index_url) %>
+          </li>
+          <li class="active"><%= @product.name %></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix">
+  <div class="container">
+    <div class="row singleProduct">
+      <div class="col-xs-12">
+        <div class="media">
+          <div class="media-left productSlider">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+              <div id="picture_large" class="carousel-inner">
+                <%= render partial: "image", collection: @images, locals: {picture_size: "large"} %>
               </div>
             </div>
-            <div class="col-xs-6">
-              <ol class="breadcrumb pull-right">
-                <li>
-                  <%= link_to("Home", potepan_index_url) %>
-                </li>
-                <li class="active"><%= @product.name %></li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- MAIN CONTENT SECTION -->
-      <section class="mainContent clearfix">
-        <div class="container">
-          <div class="row singleProduct">
-            <div class="col-xs-12">
-              <div class="media">
-                <div class="media-left productSlider">
-                  <div id="carousel" class="carousel slide" data-ride="carousel">
-                    <div id="picture_large" class="carousel-inner">
-                      <%= render partial: "image", collection: @images, locals: {picture_size: "large"} %>
-                    </div>
-                  </div>
-                  <div class="clearfix">
-                    <div id="thumbcarousel" class="carousel slide" data-interval="false">
-                      <div id="picture_small" class="carousel-inner">
-                        <%= render partial: "image", collection: @images, locals: {picture_size: "small"} %>
-                      </div>
-                      <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
-                  </div>
+            <div class="clearfix">
+              <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                <div id="picture_small" class="carousel-inner">
+                  <%= render partial: "image", collection: @images, locals: {picture_size: "small"} %>
                 </div>
-                <div class="media-body">
-                  <ul class="list-inline">
-                    <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
-                  </ul>
-                  <h2><%= @product.name %></h2>
-                  <h3><%= @product.display_price %></h3>
-                  <p><%= @product.description %></p>
-                  <% if @variants.count >= 2 %>
-                    <span class="quick-drop">
-                      <select name="guiest_id3" id="guiest_id3" class="select-drop" data-remote="true">
-                        <option value="0">-</option>
-                        <option value="1">S</option>
-                        <option value="2">M</option>
-                        <option value="3">L</option>
-                        <option value="4">XL</option>
-                      </select>
-                    </span>
-                    <span class="quick-drop">
-                      <select name="guiest_id4" id="guiest_id4" class="select-drop" data-remote="true">
-                        <option value="0">-</option>
-                        <option value="1">Red</option>
-                        <option value="2">Blue</option>
-                        <option value="3">Green</option>
-                      </select>
-                    </span>
-                  <% end %>
-                  <span class="quick-drop resizeWidth">
-                    <select name="guiest_id5" id="guiest_id5" class="select-drop">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
-                  </span>
-                  <div class="btn-area">
-                    <a href="cart_page.html" class="btn btn-primary btn-block">カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                  </div>
-                </div>
+                <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#thumbcarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
               </div>
             </div>
           </div>
-          <div class="row productsContent">
-            <div class="col-xs-12">
-              <div class="page-header">
-                <h4>関連商品</h4>
-              </div>
-            </div>
-            <div class="col-xs-12">
-              <div class="owl-carousel featuredProductsSlider">
-                <%= render partial: "related_image", collection: @related_images, locals: {products: @products}  %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-      <!-- COPY RIGHT -->
-      <div id="footer" class="copyRight clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-xs-12">
-              <p>&copy; 2016-<%= Time.now.year %> Copyright Potepan Store .</p>
-            </div>
-            <div class="col-sm-5 col-xs-12">
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              </ul>
+          <div class="media-body">
+            <ul class="list-inline">
+              <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
+            </ul>
+            <h2><%= @product.name %></h2>
+            <h3><%= @product.display_price %></h3>
+            <p><%= @product.description %></p>
+            <% if @variants.count >= 2 %>
+              <span class="quick-drop">
+                <select name="guiest_id3" id="guiest_id3" class="select-drop" data-remote="true">
+                  <option value="0">-</option>
+                  <option value="1">S</option>
+                  <option value="2">M</option>
+                  <option value="3">L</option>
+                  <option value="4">XL</option>
+                </select>
+              </span>
+              <span class="quick-drop">
+                <select name="guiest_id4" id="guiest_id4" class="select-drop" data-remote="true">
+                  <option value="0">-</option>
+                  <option value="1">Red</option>
+                  <option value="2">Blue</option>
+                  <option value="3">Green</option>
+                </select>
+              </span>
+            <% end %>
+            <span class="quick-drop resizeWidth">
+              <select name="guiest_id5" id="guiest_id5" class="select-drop">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </span>
+            <div class="btn-area">
+              <a href="cart_page.html" class="btn btn-primary btn-block">カートへ入れる<i class="fa fa-angle-right" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- LOGIN MODAL -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3 class="modal-title">log in</h3>
-          </div>
-          <div class="modal-body">
-            <form action="" method="POST" role="form">
-              <div class="form-group">
-                <label for="login-email">Enter Email</label>
-                <input type="email" class="form-control" id="login-email">
-              </div>
-              <div class="form-group">
-                <label for="login-password">Password</label>
-                <input type="password" class="form-control" id="login-password">
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember Me
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">log in</button>
-              <button type="button" class="btn btn-link btn-block">Forgot Password?</button>
-            </form>
-          </div>
+    <div class="row productsContent">
+      <div class="col-xs-12">
+        <div class="page-header">
+          <h4>関連商品</h4>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="owl-carousel featuredProductsSlider">
+          <%= render partial: "related_image", collection: @related_images, locals: {products: @products}  %>
         </div>
       </div>
     </div>
-
-    <!-- SIGN UP MODAL -->
-    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3 class="modal-title">Create an account</h3>
-          </div>
-          <div class="modal-body">
-            <form action="" method="POST" role="form">
-              <div class="form-group">
-                <label for="signup-email">Enter Email</label>
-                <input type="email" class="form-control" id="signup-email">
-              </div>
-              <div class="form-group">
-                <label for="signup-password">Password</label>
-                <input type="password" class="form-control" id="signup-password">
-              </div>
-              <div class="form-group">
-                <label for="signup-password-confirmation">Confirm Password</label>
-                <input type="password" class="form-control" id="signup-password-confirmation">
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+  </div>
+</section>

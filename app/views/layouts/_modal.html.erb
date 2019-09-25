@@ -1,0 +1,99 @@
+<!-- LOGIN MODAL -->
+<div class="modal fade login-modal" id="login" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">ログイン</h3>
+      </div>
+      <div class="modal-body">
+        <form action="login-" method="POST" role="form">
+          <div class="form-group">
+            <label for="login-email">メールアドレス</label>
+            <input type="email" class="form-control" id="login-email">
+          </div>
+          <div class="form-group">
+            <label for="login-password">パスワード</label>
+            <input type="password" class="form-control" id="login-password">
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> 記憶しておく
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">ログイン</button>
+          <a href="lost-password.html" class="btn btn-link btn-block">パスワードをお忘れの方</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SIGN UP MODAL -->
+<div class="modal fade" id="signup" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title">新規登録</h3>
+      </div>
+      <div class="modal-body">
+        <form action="" method="POST" role="form">
+          <div class="form-group">
+            <label for="signup-email">メールアドレス</label>
+            <input type="email" class="form-control" id="signup-email">
+          </div>
+          <div class="form-group">
+            <label for="signup-password">パスワード</label>
+            <input type="password" class="form-control" id="signup-password">
+          </div>
+          <div class="form-group">
+            <label for="signup-password-confirmation">パスワード（確認用）</label>
+            <input type="password" class="form-control" id="signup-password-confirmation">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">登録する</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PORDUCT QUICK VIEW MODAL -->
+<div class="modal fade quick-view" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <div class="media">
+          <div class="media-left">
+            <%= image_tag("products/quick-view/quick-view-01.jpg", :class => "media-object", :alt => "Image") %>
+          </div>
+          <div class="media-body">
+            <h2>Old Skool Navy</h2>
+            <h3>149円</h3>
+            <p>Classic sneaker from Vans. Cotton canvas and suede upper. Textile lining with heel stabilizer and ankle support. Contrasting laces. Sits on a classic waffle rubber sole.</p>
+            <span class="quick-drop">
+              <select name="guiest_id3" id="guiest_id3" class="select-drop">
+                <option value="0">S</option>
+                <option value="1">M</option>
+                <option value="2">L</option>
+                <option value="3">XL</option>
+              </select>
+            </span>
+            <span class="quick-drop resizeWidth">
+              <select name="guiest_id4" id="guiest_id4" class="select-drop">
+                <!-- <option value="0">数</option> -->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </span>
+            <div class="btn-area">
+              <a href="cart_page.html" class="btn btn-primary btn-block">カートへ入れる <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
