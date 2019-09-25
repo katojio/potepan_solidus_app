@@ -1,5 +1,5 @@
 <% if picture_size == "large" %>
-  <% if image_counter == 0 %>
+  <% if image_counter.zero? %>
     <div class="item active" data-thumb="0">
   <% else %>
     <div class="item" data-thumb=<%= "#{image_counter}" %> >
