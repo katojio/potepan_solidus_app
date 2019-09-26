@@ -197,4 +197,4 @@ crashlytics-build.properties
 fabric.properties
 
 # RSpec test result
-spec/**/*.txt
+/spec/examples.txt
