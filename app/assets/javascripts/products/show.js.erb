@@ -16,14 +16,14 @@ $(function() {
     }
 
     // Change large picture
-    $.get("3/edit_l_pic", {
+    $.get("3/large_pic", {
       variant_id: variant_id
     }, function(data) {
       $("#picture_large").html(data);
     });
 
     // Change small picture
-    $.get("3/edit_s_pic", {
+    $.get("3/small_pic", {
       variant_id: variant_id
     }, function(data) {
       $("#picture_small").html(data);

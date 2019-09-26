@@ -27,16 +27,16 @@ RSpec.describe Potepan::ProductsController, type: :controller do
     let!(:product) { create(:product) }
     let!(:variant) { create(:variant) }
 
-    describe "#show_edit_l_pic" do
+    describe "#large_pic" do
       it "response successful" do
-        get :show_edit_l_pic, params: { id: product.id, variant_id: variant.id }
+        get :show_large_pic, params: { id: product.id, variant_id: variant.id }
         expect(response).to be_successful
       end
     end
 
-    describe "#show_edit_s_pic" do
+    describe "#small_pic" do
       it "response successful" do
-        get :show_edit_s_pic, params: { id: product.id, variant_id: variant.id }
+        get :show_small_pic, params: { id: product.id, variant_id: variant.id }
         expect(response).to be_successful
       end
     end

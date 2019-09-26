@@ -1,5 +1,7 @@
 module Potepan
   class ProductsController < ApplicationController
+    MULTI_VARIANTS = 2
+
     def show
       @product  ||= Spree::Product.find(params[:id])
       @variants   = Spree::Variant.where(product_id: @product.id)
@@ -51,7 +53,7 @@ module Potepan
       end
     end
 
-    def show_edit_l_pic
+    def show_large_pic
       @product  ||= Spree::Product.find(params[:id])
       @variant    = Spree::Variant.find(params[:variant_id])
       @images     = Spree::Image.where(viewable_id: @variant.id)
@@ -59,7 +61,7 @@ module Potepan
                      locals: { picture_size: 'large' })
     end
 
-    def show_edit_s_pic
+    def show_small_pic
       @product  ||= Spree::Product.find(params[:id])
       @variant    = Spree::Variant.find(params[:variant_id])
       @images     = Spree::Image.where(viewable_id: @variant.id)

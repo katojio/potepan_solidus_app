@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     get :tokushoho,                 to: 'sample#tokushoho'
     get :privacy_policy,            to: 'sample#privacy_policy'
     resources 'products',           only: :show
-    get 'products/:id/edit_l_pic',  to: 'products#show_edit_l_pic'
-    get 'products/:id/edit_s_pic',  to: 'products#show_edit_s_pic'
+    get 'products/:id/large_pic',  to: 'products#show_large_pic'
+    get 'products/:id/small_pic',  to: 'products#show_small_pic'
   end
 end
