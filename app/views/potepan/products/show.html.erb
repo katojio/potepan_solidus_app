@@ -53,7 +53,7 @@
             <h2><%= @product.name %></h2>
             <h3><%= @product.display_price %></h3>
             <p><%= @product.description %></p>
-            <% if @variants.count >= MULTI_VARIANTS %>
+            <% if @variants.count > 1 %>
               <span class="quick-drop">
                 <select name="guiest_id3" id="guiest_id3" class="select-drop" data-remote="true">
                   <option value="0">-</option>

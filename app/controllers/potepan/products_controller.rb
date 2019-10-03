@@ -1,7 +1,5 @@
 module Potepan
   class ProductsController < ApplicationController
-    MULTI_VARIANTS = 2
-
     def show
       @product  ||= Spree::Product.find(params[:id])
       @variants   = Spree::Variant.where(product_id: @product.id)
