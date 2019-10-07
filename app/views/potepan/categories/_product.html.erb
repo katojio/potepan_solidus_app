@@ -1,0 +1,13 @@
+<div class="col-sm-4 col-xs-12">
+  <div class="productBox">
+    <div class="productImage clearfix">
+      <%= image_tag("/spree/products/#{images[product_counter].id}/large/#{images[product_counter].attachment_file_name}", :alt => "featured-product-img") %>
+    </div>
+    <div class="productCaption clearfix">
+      <a href="single_product.html">
+        <h5><%= product.name %></h5>
+      </a>
+      <h3><%= product.display_price %></h3>
+    </div>
+  </div>
+</div>
