@@ -1,0 +1,430 @@
+<% provide(:title, "Category") %>
+<!-- LIGHT SECTION -->
+<section class="lightSection clearfix pageHeader">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="page-title">
+          <h2>Category name</h2>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <ol class="breadcrumb pull-right">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">shop</a>
+          </li>
+          <li class="active">Category name</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix productsContent">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4 col-xs-12 sideBar">
+        <div class="panel panel-default">
+          <div class="panel-heading">商品カテゴリー</div>
+          <div class="panel-body">
+            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
+              <ul class="nav navbar-nav side-nav">
+                <li>
+                  <a href="javascript:;" data-toggle="collapse" data-target="#women">レディース<i class="fa fa-plus"></i></a>
+                  <ul id="women" class="collapse collapseItem">
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>トップス <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>アウター <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>ボトムス <span>(25)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>靴 <span>(2)</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;" data-toggle="collapse" data-target="#men">メンズ<i class="fa fa-plus"></i></a>
+                  <ul id="men" class="collapse collapseItem">
+                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>トップス <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>アウター <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>ボトムス <span>(25)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>靴 <span>(2)</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;" data-toggle="collapse" data-target="#kids">キッズ<i class="fa fa-plus"></i></a>
+                  <ul id="kids" class="collapse collapseItem">
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>トップス <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>アウター <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>ボトムス <span>(25)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>靴 <span>(2)</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="javascript:;" data-toggle="collapse" data-target="#accessories">アクセサリー<i class="fa fa-plus"></i></a>
+                  <ul id="accessories" class="collapse collapseItem">
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>モバイルケース・アクセサリー <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>財布・革小物 <span>(6)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>腕時計 <span>(25)</span></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>帽子 <span>(2)</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="panel panel-default priceRange">
+          <div class="panel-heading">値段から探す</div>
+          <div class="panel-body clearfix">
+            <div class="price-slider-inner">
+              <span class="amount-wrapper">
+                <input type="text" id="price-amount-1" readonly>
+                <strong>-</strong>
+                <input type="text" id="price-amount-2" readonly>
+              </span>
+              <div id="price-range"></div>
+            </div>
+            <input class="btn btn-default" type="submit" value="絞り込む">
+            <!-- <span class="priceLabel">Price: <strong>12 円- 30<円/strong></span>
+          </div>
+        </div> -->
+        <div class="panel panel-default filterNormal">
+          <div class="panel-heading">色から探す</div>
+          <div class="panel-body">
+            <ul class="list-unstyled">
+              <li><a href="#">ブラック<span>(15)</span></a></li>
+              <li><a href="#">ホワイト<span>(10)</span></a></li>
+              <li><a href="#">レッド<span>(7)</span></a></li>
+              <li><a href="#">ブルー<span>(12)</span></a></li>
+              <li><a href="#">オレンジ<span>(12)</span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-default filterNormal">
+          <div class="panel-heading">サイズから探す</div>
+          <div class="panel-body">
+            <ul class="list-unstyled clearfix">
+              <li><a href="#">S<span>(15)</span></a></li>
+              <li><a href="#">M<span>(10)</span></a></li>
+              <li><a href="#">L<span>(7)</span></a></li>
+              <li><a href="#">XL<span>(12)</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-8 col-xs-12">
+        <div class="row filterArea">
+          <div class="col-xs-6">
+            <select name="guiest_id1" id="guiest_id1" class="select-drop">
+              <option value="0">並び替え</option>
+              <option value="1">人気順</option>
+              <option value="2">安い順</option>
+              <option value="3">新着順</option>
+              <option value="3">高い順</option>
+            </select>
+          </div>
+          <div class="col-xs-6">
+            <div class="btn-group pull-right" role="group">
+              <button type="button" class="btn btn-default active" onclick="window.location.href='product_grid_left_sidebar.html'"><i class="fa fa-th" aria-hidden="true"></i><span>Grid</span></button>
+              <button type="button" class="btn btn-default" onclick="window.location.href='product_list_left_sidebar.html'"><i class="fa fa-th-list" aria-hidden="true"></i><span>List</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-01.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Nike Sportswear</h5>
+                </a>
+                <h3>199円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-02.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Dip Dyed Sweater</h5>
+                </a>
+                <h3>249円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-03.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Scarf Ring Corner</h5>
+                </a>
+                <h3>179円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-04.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Sun Buddies</h5>
+                </a>
+                <h3>149円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-05.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Nike Sportswear</h5>
+                </a>
+                <h3>199円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-06.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Dip Dyed Sweater</h5>
+                </a>
+                <h3>249円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-07.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Scarf Ring Corner</h5>
+                </a>
+                <h3>179円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-08.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Sun Buddies</h5>
+                </a>
+                <h3>149円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-09.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Nike Sportswear</h5>
+                </a>
+                <h3>199円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-10.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Dip Dyed Sweater</h5>
+                </a>
+                <h3>249円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-11.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Scarf Ring Corner</h5>
+                </a>
+                <h3>179円</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="productBox">
+              <div class="productImage clearfix">
+                <%= image_tag("img/products/products-12.jpg", :alt => "products-img") %>
+                <!-- <div class="productMasking">
+                  <ul class="list-inline btn-group" role="group">
+                    <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                    <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                    <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="productCaption clearfix">
+                <a href="single_product.html">
+                  <h5>Sun Buddies</h5>
+                </a>
+                <h3>149円</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHT SECTION -->
+<section class="lightSection clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="owl-carousel partnersLogoSlider">
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-01.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-02.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-03.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-04.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-05.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-01.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-02.png", :alt => "partner-img") %>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="partnersLogo clearfix">
+              <%= image_tag("img/home/partners/partner-03.png", :alt => "partner-img") %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
