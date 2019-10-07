@@ -1,18 +1,10 @@
 module Potepan
   class CategoriesController < ApplicationController
     def show
-      classifications = Spree::Classification.where(taxon_id: params[:id])
-      @products = []
-      classifications.each do |c|
-        @products << Spree::Product.find(c.product_id)
-      end
-      @variants = []
-      @products.each do |p|
-        @variants << Spree::Variant.find_by(product_id: p.id)
-      end
+      @products = Spree::Taxon.find(params[:id]).products
       @images = []
-      @variants.each do |v|
-        @images << Spree::Image.find_by(viewable_id: v.id)
+      @products.each do |p|
+        @images << p.images.first
       end
 
       categories_taxonomy_id = Spree::Taxonomy.find_by(name: "Categories").id
@@ -27,7 +19,7 @@ module Potepan
         else
           @small_categories << t
         end
-        @products_count[t.id] = Spree::Classification.where(taxon_id: t.id).count
+        @products_count[t.id] = Spree::Taxon.find(t.id).products.count
       end
     end
   end
