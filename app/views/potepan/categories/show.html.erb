@@ -32,41 +32,7 @@
           <div class="panel-body">
             <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
               <ul class="nav navbar-nav side-nav">
-                <li>
-                  <a href="javascript:;" data-toggle="collapse" data-target="#bags">Bags<i class="fa fa-plus"></i></a>
-                  <ul id="bags" class="collapse collapseItem">
-                    <li>
-                      <%= link_to potepan_category_path(3) do %>
-                        <i class="fa fa-caret-right" aria-hidden="true"></i> Bags <span>(2)</span>
-                      <% end %>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="javascript:;" data-toggle="collapse" data-target="#mugs">Mugs<i class="fa fa-plus"></i></a>
-                  <ul id="mugs" class="collapse collapseItem">
-                    <li>
-                      <%= link_to potepan_category_path(4) do %>
-                        <i class="fa fa-caret-right" aria-hidden="true"></i> Mugs <span>(2)</span>
-                      <% end %>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="javascript:;" data-toggle="collapse" data-target="#clothing">Clothing<i class="fa fa-plus"></i></a>
-                  <ul id="clothing" class="collapse collapseItem">
-                    <li>
-                      <%= link_to potepan_category_path(6) do %>
-                        <i class="fa fa-caret-right" aria-hidden="true"></i> Shirts <span>(1)</span>
-                      <% end %>
-                    </li>
-                    <li>
-                      <%= link_to potepan_category_path(7) do %>
-                        <i class="fa fa-caret-right" aria-hidden="true"></i> T-Shirts <span>(4)</span>
-                      <% end %>
-                    </li>
-                  </ul>
-                </li>
+                <%= render partial: "large_category", collection: @large_categories, locals: {small_categories: @small_categories, products_count: @products_count}  %>
               </ul>
             </div>
           </div>
