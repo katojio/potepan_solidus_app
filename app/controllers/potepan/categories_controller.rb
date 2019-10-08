@@ -1,13 +1,15 @@
 module Potepan
   class CategoriesController < ApplicationController
     def show
-      @products = Spree::Taxon.find(params[:id]).products
-      @images = []
+      @taxon    = Spree::Taxon.find(params[:id])
+      @products = @taxon.products
+      @images   = []
       @products.each do |p|
         @images << p.images.first
       end
 
-      categories_taxonomy_id = Spree::Taxonomy.find_by(name: "Categories").id
+      category_taxonomy = Spree::Taxonomy.find_by(name: "Categories")
+      categories_taxonomy_id = category_taxonomy.id unless category_taxonomy.nil?
       category_taxons = Spree::Taxon.where(taxonomy_id:
         categories_taxonomy_id).where.not(parent_id: nil)
       @large_categories = []
