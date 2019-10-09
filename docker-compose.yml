@@ -26,6 +26,10 @@ services:
       - '36379:6379'
     volumes:
       - redis-data:/var/lib/redis
+  chrome:
+    image: selenium/standalone-chrome:3.141.59-dubnium
+    ports:
+      - '4444:4444'
   potepanec:
     build:
       context: .
@@ -40,6 +44,7 @@ services:
     depends_on:
       - mysql
       - redis
+      - chrome
     networks:
       - default
     volumes:
