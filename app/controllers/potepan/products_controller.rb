@@ -11,7 +11,7 @@ module Potepan
       taxons = Spree::Product.find(params[:id]).taxons
       taxons.each do |t|
         t.products.each do |p|
-          if ( (p.id != @product.id) && !(@related_products.include?(p)) )
+          if p.id != @product.id && !@related_products.include?(p)
             @related_products << p
           end
         end

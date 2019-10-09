@@ -60,7 +60,7 @@ RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :system
 end
 
-Capybara.server_host = Socket.ip_address_list.detect{|addr| addr.ipv4_private?}.ip_address
+Capybara.server_host = Socket.ip_address_list.detect { |addr| addr.ipv4_private? }.ip_address
 Capybara.server_port = 3000
 
 Capybara.register_driver :selenium_remote do |app|
@@ -70,7 +70,6 @@ Capybara.register_driver :selenium_remote do |app|
 end
 
 RSpec.configure do |config|
-
   config.before(:each, type: :system) do
     driven_by :rack_test
   end
@@ -79,5 +78,4 @@ RSpec.configure do |config|
     driven_by :selenium_remote
     host! "http://#{Capybara.server_host}:#{Capybara.server_port}"
   end
-
 end
