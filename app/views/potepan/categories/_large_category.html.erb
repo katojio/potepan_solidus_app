@@ -1,6 +1,6 @@
 <li>
-  <a href="javascript:;" data-toggle="collapse" data-target="#<%= "#{large_category.name.downcase}" %>"><%= large_category.name %><i class="fa fa-plus"></i></a>
-  <ul id="<%= "#{large_category.name.downcase}" %>" class="collapse collapseItem">
+  <a href="javascript:;" data-toggle="collapse" data-target="#<%= "category#{large_category.id}" %>"><%= large_category.name %><i class="fa fa-plus"></i></a>
+  <ul id="<%= "category#{large_category.id}" %>" class="collapse collapseItem">
     <% has_small_category = false %>
     <% small_categories.each do |small_category| %>
       <% if large_category.id == small_category.parent_id %>
@@ -12,7 +12,7 @@
         </li>
       <% end %>
     <% end %>
-    <% if has_small_category == false %>
+    <% if !has_small_category %>
       <li>
         <%= link_to potepan_category_path(large_category.id) do %>
           <i class="fa fa-caret-right" aria-hidden="true"></i> <%= large_category.name %> <span>(<%= products_count[large_category.id] %>)</span>
