@@ -2,7 +2,7 @@
   <%= link_to potepan_product_path(product.id) do %>
     <div class="productBox">
       <div class="productImage clearfix">
-        <%= image_tag("/spree/products/#{images[product_counter].id}/large/#{images[product_counter].attachment_file_name}", :alt => "featured-product-img") %>
+        <%= image_tag(product.display_image.attachment(:large)) %>
       </div>
       <div class="productCaption clearfix">
         <h5><%= product.name %></h5>

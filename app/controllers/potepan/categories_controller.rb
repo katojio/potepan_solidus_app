@@ -3,10 +3,6 @@ module Potepan
     def show
       @taxon    = Spree::Taxon.find(params[:id])
       @products = @taxon.products
-      @images   = []
-      @products.each do |p|
-        @images << p.images.first
-      end
 
       category_taxonomy = Spree::Taxonomy.find_by(name: "Categories")
       categories_taxonomy_id = category_taxonomy.id unless category_taxonomy.nil?
