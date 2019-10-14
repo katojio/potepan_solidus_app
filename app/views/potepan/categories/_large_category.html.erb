@@ -7,7 +7,7 @@
         <% has_small_category = true %>
         <li>
           <%= link_to potepan_category_path(small_category.id) do %>
-            <i class="fa fa-caret-right" aria-hidden="true"></i> <%= small_category.name %> <span>(<%= products_count[small_category.id] %>)</span>
+            <i class="fa fa-caret-right" aria-hidden="true"></i> <%= small_category.name %> <span>(<%= small_category.products.count %>)</span>
           <% end %>
         </li>
       <% end %>
@@ -15,7 +15,7 @@
     <% if !has_small_category %>
       <li>
         <%= link_to potepan_category_path(large_category.id) do %>
-          <i class="fa fa-caret-right" aria-hidden="true"></i> <%= large_category.name %> <span>(<%= products_count[large_category.id] %>)</span>
+          <i class="fa fa-caret-right" aria-hidden="true"></i> <%= large_category.name %> <span>(<%= large_category.products.count %>)</span>
         <% end %>
       </li>
     <% end %>
