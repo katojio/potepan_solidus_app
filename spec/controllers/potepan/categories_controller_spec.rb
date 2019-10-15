@@ -2,9 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Potepan::CategoriesController, type: :controller do
   describe "カテゴリーページ" do
-    let!(:taxonomy) { create(:taxonomy, name: "Categories") }
-    let!(:taxon) { create(:taxon, taxonomy: taxonomy) }
-    let!(:product) { create(:product, taxons: [taxon]) }
+    let!(:taxonomy)        { create(:taxonomy, name: "Categories") }
+    let!(:taxon)           { create(:taxon, taxonomy: taxonomy) }
+    let!(:product)         { create(:product, taxons: [taxon]) }
+    let!(:category_taxons) { taxonomy.taxons }
 
     before do
       get :show, params: { id: taxon.id }
@@ -23,13 +24,11 @@ RSpec.describe Potepan::CategoriesController, type: :controller do
       expect(assigns(:products)).to match_array(product)
     end
     it "@large_categoriesがアサインされる" do
-      category_taxons  = taxonomy.taxons
-      large_categories = category_taxons.select { |t| t.parent_id == taxonomy.id }
+      large_categories = category_taxons.select { |t| t.parent_id == taxon.id }
       expect(assigns(:large_categories)).to eq large_categories
     end
     it "@small_categoriesがアサインされる" do
-      category_taxons  = taxonomy.taxons
-      small_categories = category_taxons.select { |t| t.parent_id != taxonomy.id }
+      small_categories = category_taxons.select { |t| t.parent_id != taxon.id }
       expect(assigns(:small_categories)).to eq small_categories
     end
   end
