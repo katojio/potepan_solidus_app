@@ -18,9 +18,9 @@ Rails.application.routes.draw do
     get :about_us,                  to: 'sample#about_us'
     get :tokushoho,                 to: 'sample#tokushoho'
     get :privacy_policy,            to: 'sample#privacy_policy'
-    resources 'products',           only: :show
+    resources :products,            only: :show
     get 'products/:id/large_pic',   to: 'products#show_large_pic'
     get 'products/:id/small_pic',   to: 'products#show_small_pic'
-    resources 'categories',         only: :show
+    resources :categories,          only: :show
   end
 end
