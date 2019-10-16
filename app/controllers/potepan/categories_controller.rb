@@ -7,7 +7,7 @@ module Potepan
       category_taxonomy = Spree::Taxonomy.find_by(name: 'Categories')
       category_taxons   = category_taxonomy.taxons unless category_taxonomy.nil?
       category_taxon    = category_taxons.find_by(name: 'Categories')
-      unless category_taxon.nil?
+      if category_taxon.present?
         @large_categories = category_taxons.select { |t| t.parent_id == category_taxon.id }
         @small_categories = category_taxons.select { |t| t.parent_id != category_taxon.id }
       end
