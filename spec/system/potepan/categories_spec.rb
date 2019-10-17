@@ -62,7 +62,7 @@ RSpec.describe "Potepan::Categories", type: :system do
       it "カテゴリーに該当する商品の詳細ページへのリンクがあることを確認" do
         expect(page).to have_link(href: potepan_product_path(product.id))
       end
-      
+
       it "カテゴリーに該当しない商品の名前がないことを確認" do
         expect(page).to have_no_content other_product.name
       end
