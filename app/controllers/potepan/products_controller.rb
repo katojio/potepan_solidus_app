@@ -5,20 +5,9 @@ module Potepan
       @variants   = Spree::Variant.where(product_id: @product.id)
       @images     = @product.images
 
-      # Search related images
-      @related_products = []
-      @related_images = []
-      taxons = Spree::Product.find(params[:id]).taxons
-      taxons.each do |t|
-        t.products.each do |p|
-          if p.id != @product.id && !@related_products.include?(p)
-            @related_products << p
-          end
-        end
-      end
-      @related_products.each do |r|
-        @related_images << r.images.first
-      end
+      taxonomy = Spree::Taxonomy.find_by(name: 'Categories')
+      taxon = @product.taxons.find_by(taxonomy_id: taxonomy.id) unless taxonomy.nil?
+      @related_products = taxon.present? ? taxon.products.reject{ |p| p.id == @product.id } : nil
 
       respond_to do |format|
         format.html { render 'show' }
