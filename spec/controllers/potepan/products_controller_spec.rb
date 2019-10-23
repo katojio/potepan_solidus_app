@@ -20,6 +20,10 @@ RSpec.describe Potepan::ProductsController, type: :controller do
       it '@productがアサインされる' do
         expect(assigns(:product)).to eq product
       end
+
+      it '@imagesがアサインされる' do
+        expect(assigns(:images)).to eq product.images
+      end
     end
   end
 

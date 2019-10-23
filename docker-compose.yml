@@ -15,7 +15,9 @@ services:
     networks:
       - default
     ports:
-      - '33306:3306'
+      - '3306:3306'
+    security_opt:
+    - seccomp:unconfined
     volumes:
       - mysql_8_0-data:/var/lib/mysql
   redis:
