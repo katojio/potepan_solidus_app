@@ -2,7 +2,12 @@ require 'rails_helper'
 
 RSpec.describe "Potepan::Products", type: :system do
   describe "製品詳細ページ" do
-    let!(:product) { create(:product) }
+    let!(:taxonomy)         { create(:taxonomy, name: 'Categories') }
+    let!(:taxon)            { create(:taxon, taxonomy: taxonomy) }
+    let!(:product)          { create(:product, taxons: [taxon]) }
+    let!(:product_r1)       { create(:product, taxons: [taxon]) }
+    let!(:product_r2)       { create(:product, taxons: [taxon]) }
+    let!(:related_products) { taxon.products.reject{ |p| p.id == product.id } }
 
     before do
       visit potepan_product_path(product.id)
@@ -23,6 +28,17 @@ RSpec.describe "Potepan::Products", type: :system do
         within find('.singleProduct') do
           expect(page).to have_content product.name
           expect(page).to have_content product.display_price
+        end
+      end
+    end
+
+    context "関連画像の表示について" do
+      it "製品名、価格が表示されていることを確認" do
+        within find('.featuredProductsSlider') do
+          related_products.each do |p|
+            expect(page).to have_content p.name
+            expect(page).to have_content p.display_price
+          end
         end
       end
     end
