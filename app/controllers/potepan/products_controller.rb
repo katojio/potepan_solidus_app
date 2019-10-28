@@ -4,7 +4,9 @@ module Potepan
       @product  ||= Spree::Product.find(params[:id])
       @variants   = Spree::Variant.where(product_id: @product.id)
       @images     = @product.images
-      @related_products = (@product.taxons.flat_map { |t| t.products.where.not(id: @product.id) }).take(10)
+      $RELATED_IMAGES_LIMITATION = 10
+      @related_products = (@product.taxons.flat_map { |t| t.products.where.not(id: @product.id) }
+                           ).uniq.take($RELATED_IMAGES_LIMITATION)
 
       respond_to do |format|
         format.html { render 'show' }
