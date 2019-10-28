@@ -7,7 +7,7 @@ RSpec.describe "Potepan::Products", type: :system do
     let!(:product)          { create(:product, taxons: [taxon]) }
     let!(:product_r1)       { create(:product, taxons: [taxon]) }
     let!(:product_r2)       { create(:product, taxons: [taxon]) }
-    let!(:related_products) { taxon.products.reject{ |p| p.id == product.id } }
+    let!(:related_products) { [product_r1, product_r2] }
     let!(:other_product)    { create(:product) }
 
     before do
