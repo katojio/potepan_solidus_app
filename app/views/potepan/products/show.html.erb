@@ -47,7 +47,11 @@
           </div>
           <div class="media-body">
             <ul class="list-inline">
-              <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
+              <li>
+                <%= link_to potepan_category_path(@product.taxons.first.id) do %>
+                　<i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る
+                <% end %>
+              </li>
             </ul>
             <h2><%= @product.name %></h2>
             <h3><%= @product.display_price %></h3>
