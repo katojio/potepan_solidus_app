@@ -5,9 +5,7 @@ RSpec.describe "Potepan::Products", type: :system do
     let!(:taxonomy)         { create(:taxonomy, name: 'Categories') }
     let!(:taxon)            { create(:taxon, taxonomy: taxonomy) }
     let!(:product)          { create(:product, taxons: [taxon]) }
-    let!(:product_r1)       { create(:product, taxons: [taxon]) }
-    let!(:product_r2)       { create(:product, taxons: [taxon]) }
-    let!(:related_products) { [product_r1, product_r2] }
+    let!(:related_products) { create_list(:product, 2, taxons: [taxon]) }
     let!(:other_product)    { create(:product) }
 
     before do
