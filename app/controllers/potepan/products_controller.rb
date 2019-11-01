@@ -1,13 +1,10 @@
 module Potepan
   class ProductsController < ApplicationController
-    RELATED_IMAGES_LIMITATION = 10
-    
     def show
       @product  ||= Spree::Product.find(params[:id])
       @variants   = Spree::Variant.where(product_id: @product.id)
       @images     = @product.images
-      @related_products = (@product.taxons.flat_map { |t| t.products.where.not(id: @product.id) }
-                          ).uniq.take(RELATED_IMAGES_LIMITATION)
+      @related_products = @product.acquire_related_products
 
       respond_to do |format|
         format.html { render 'show' }
