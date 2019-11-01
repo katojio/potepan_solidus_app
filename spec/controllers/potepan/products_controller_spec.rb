@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Potepan::ProductsController, type: :controller do
   context 'HTMLでページを表示' do
     describe "商品詳細ページ" do
-      let!(:taxon)            { create(:taxon) }
+      let!(:taxon) { create(:taxon) }
       let!(:product) { create(:product, taxons: [taxon]) }
       let!(:related_products) { create_list(:product, 2, taxons: [taxon]) }
 

@@ -14,3 +14,52 @@ Metrics/LineLength:
 Style/RedundantReturn:
   Exclude:
     - 'app/controllers/potepan/products_controller.rb'
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+    - 'db/migrate/20180922105239_create_active_storage_tables.active_storage.rb'
+
+Rails/CreateTableWithTimestamps:
+  Exclude:
+    - 'db/migrate/20180921154144_transform_tax_rate_category_relation.spree.rb'
+
+Layout/EmptyLineAfterMagicComment:
+  Exclude:
+    - 'db/migrate/20190911033753_add_reset_password_token_index_to_spree_users.solidus_auth.rb'
+
+Lint/UselessAssignment:
+  Exclude:
+    - 'spec/rails_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'app/models/potepan/product_decorator.rb'
+
+Layout/EmptyLines:
+  Exclude:
+    - 'config/initializers/spree.rb'
+
+Layout/AlignParameters:
+  Exclude:
+    - 'config/application.rb'
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'config/spring.rb'
+    - 'app/models/potepan/product_decorator.rb'
+
+Style/TrailingCommaInHashLiteral:
+  Exclude:
+    - 'config/environments/development.rb'
+    - 'config/environments/test.rb'
+
+Airbnb/OptArgParameters:
+  Exclude:
+    - 'app/helpers/application_helper.rb'
+
+Layout/DotPosition:
+  Exclude:
+    - 'app/models/potepan/product_decorator.rb'
+
+Layout/MultilineMethodCallIndentation:
+  Exclude:
+    - 'app/models/potepan/product_decorator.rb'
