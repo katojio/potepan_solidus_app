@@ -28,7 +28,7 @@ RSpec.describe Potepan::ProductsController, type: :controller do
       end
 
       it '@related_productsがアサインされる' do
-        expect(assigns(:related_products)).to eq related_products
+        expect(assigns(:related_products)).to match_array related_products
       end
     end
   end
