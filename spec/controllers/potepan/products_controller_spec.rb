@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe Potepan::ProductsController, type: :controller do
   context 'HTMLでページを表示' do
     describe "商品詳細ページ" do
-      let!(:product) { create(:product) }
+      let!(:taxon)            { create(:taxon) }
+      let!(:product) { create(:product, taxons: [taxon]) }
+      let!(:related_products) { create_list(:product, 2, taxons: [taxon]) }
 
       before do
         get :show, params: { id: product.id }
@@ -23,6 +25,10 @@ RSpec.describe Potepan::ProductsController, type: :controller do
 
       it '@imagesがアサインされる' do
         expect(assigns(:images)).to eq product.images
+      end
+
+      it '@related_productsがアサインされる' do
+        expect(assigns(:related_products)).to eq related_products
       end
     end
   end
