@@ -1,10 +1,9 @@
 module Potepan::ProductDecorator
   def acquire_related_products
-    taxons_ids = Spree::Product.find(id).taxons.ids
     return [] if taxon_ids.empty?
 
     Spree::Product.joins(:taxons)
-                  .includes(master: %i[images default_price])
+                  .includes(master: %i(images default_price))
                   .where('spree_taxons.id IN (?) AND spree_products.id <> ?',
                          taxon_ids, id)
                   .distinct
