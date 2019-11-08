@@ -18,7 +18,6 @@
 
 .byebug_history
 /public/spree
-/vendor
 
 ### https://raw.github.com/github/gitignore/515d7fcbbab869614a342a29c56d2010b7d8576d/Node.gitignore
 
