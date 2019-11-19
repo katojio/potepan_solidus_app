@@ -1298,11 +1298,11 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 	-o-transition: opacity .3s;
 	-ms-transition: opacity .3s;
 	transition: opacity .3s;
-	background-image: linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: linear-gradient(to top, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -o-linear-gradient(to top, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -moz-linear-gradient(to top, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -webkit-linear-gradient(to top, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
+	background-image: -ms-linear-gradient(to top, rgb(0,0,0) 13%, rgb(50,50,50) 100%);
 
 	background-image: -webkit-gradient(
 		linear,
@@ -1311,7 +1311,7 @@ img.tp-slider-alternative-image	{	width:100%; height:auto;}
 		color-stop(0.13, rgb(0,0,0)),
 		color-stop(1, rgb(50,50,50))
 	);
-	
+
 	display:table;max-width:100%; overflow:hidden;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;
 }
 
