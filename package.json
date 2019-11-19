@@ -3,3 +3,7 @@
   "private": true,
   "dependencies": {}
 }
+
+"engines": {
+  "yarn": "1.x"
+}
