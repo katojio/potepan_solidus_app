@@ -20,21 +20,25 @@
         </div>
       </div>
       <div class="col-sm-4 col-xs-12">
-        <div class="thumbnail" onclick="location.href='single_product.html';">
+        <div class="thumbnail" onclick="location.href='/potepan/categories/7';">
           <div class="imageWrapper">
             <%= image_tag("home/featured-collection/featured-collection-01.jpg", :alt => "feature-collection-image") %>
-            <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Shirts</a></div>
+            <div class="masking">
+              <%= link_to "View T-Shirts", potepan_category_path(7), class: "btn viewBtn" %>
+            </div>
           </div>
           <div class="caption">
-            <h4>Shirts</h4>
+            <h4>T-Shirts</h4>
           </div>
         </div>
       </div>
       <div class="col-sm-4 col-xs-12">
-        <div class="thumbnail" onclick="location.href='single_product.html';">
+        <div class="thumbnail" onclick="location.href='/potepan/categories/3';">
           <div class="imageWrapper">
             <%= image_tag("home/featured-collection/featured-collection-02.jpg", :alt => "feature-collection-image") %>
-            <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Bags</a></div>
+            <div class="masking">
+              <%= link_to "View Bags", potepan_category_path(3), class: "btn viewBtn" %>
+            </div>
           </div>
           <div class="caption">
             <h4>Bags</h4>
@@ -42,13 +46,15 @@
         </div>
       </div>
       <div class="col-sm-4 col-xs-12">
-        <div class="thumbnail" onclick="location.href='single_product.html';">
+        <div class="thumbnail" onclick="location.href='/potepan/categories/4';">
           <div class="imageWrapper">
-            <%= image_tag("home/featured-collection/featured-collection-03.jpg", :alt => "feature-collection-image") %>
-            <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Denim</a></div>
+            <%= image_tag(Spree::Product.find(8).display_image.attachment(:large), :alt => "feature-collection-image") %>
+            <div class="masking">
+              <%= link_to "View Mugs", potepan_category_path(4), class: "btn viewBtn" %>
+            </div>
           </div>
           <div class="caption">
-            <h4>Denim</h4>
+            <h4>Mugs</h4>
           </div>
         </div>
       </div>
