@@ -1,6 +1,12 @@
 {
   "name": "potepanec",
   "private": true,
-  "dependencies": {},
-  "yarn": "1.x"
+  "dependencies": {}
+}
+
+{
+  "engines" : {
+    "node" : "12.12.0"
+    "npm" : "6.11.3"
+  }
 }
