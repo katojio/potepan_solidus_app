@@ -3,10 +3,3 @@
   "private": true,
   "dependencies": {}
 }
-
-{
-  "engines" : {
-    "node" : "12.12.0",
-    "npm" : "6.12.0"
-  }
-}
