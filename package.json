@@ -1,9 +1,6 @@
 {
   "name": "potepanec",
   "private": true,
-  "dependencies": {}
-}
-
-"engines": {
+  "dependencies": {},
   "yarn": "1.x"
 }
