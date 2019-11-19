@@ -1,0 +1,157 @@
+<!-- BANNER -->
+<div class="bannercontainer">
+  <div class="fullscreenbanner-container">
+    <div class="fullscreenbanner">
+      <ul>
+        <li>
+          <%= image_tag("home/banner-slider/slider-bg.jpg", :alt => "slidebg1", data:{bgposition: "center center", bgfit: "cover" , bgrepeat: "no-repeat"}) %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- MAIN CONTENT SECTION -->
+<section class="mainContent clearfix">
+  <div class="container">
+    <div class="row featuredCollection">
+      <div class="col-xs-12">
+        <div class="page-header">
+          <h4>人気カテゴリー</h4>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="thumbnail" onclick="location.href='single_product.html';">
+          <div class="imageWrapper">
+            <%= image_tag("home/featured-collection/featured-collection-01.jpg", :alt => "feature-collection-image") %>
+            <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Shirts</a></div>
+          </div>
+          <div class="caption">
+            <h4>Shirts</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="thumbnail" onclick="location.href='single_product.html';">
+          <div class="imageWrapper">
+            <%= image_tag("home/featured-collection/featured-collection-02.jpg", :alt => "feature-collection-image") %>
+            <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Bags</a></div>
+          </div>
+          <div class="caption">
+            <h4>Bags</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-xs-12">
+        <div class="thumbnail" onclick="location.href='single_product.html';">
+          <div class="imageWrapper">
+            <%= image_tag("home/featured-collection/featured-collection-03.jpg", :alt => "feature-collection-image") %>
+            <div class="masking"><a href="product_grid_left_sidebar.html" class="btn viewBtn">View Denim</a></div>
+          </div>
+          <div class="caption">
+            <h4>Denim</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row featuredProducts">
+      <div class="col-xs-12">
+        <div class="page-header">
+          <h4>新着商品</h4>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <div class="owl-carousel featuredProductsSlider">
+          <div class="slide">
+            <div class="productImage clearfix">
+              <%= image_tag("home/featured-product/product-01.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption clearfix">
+              <a href="single_product.html">
+                <h5>Mauris efficitur</h5>
+              </a>
+              <h3>199円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-02.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Nulla facilisi</h5>
+              </a>
+              <h3>149円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-03.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Praesent dui felis</h5>
+              </a>
+              <h3>79円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-04.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Cras eu faucibus</h5>
+              </a>
+              <h3>109円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-05.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Mauris lobortis augue</h5>
+              </a>
+              <h3>199円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-06.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Suspendisse suscipit</h5>
+              </a>
+             <h3>149円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-07.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Praesent a augue</h5>
+              </a>
+              <h3>79円</h3>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="productImage">
+              <%= image_tag("home/featured-product/product-09.jpg", :alt => "featured-product-img") %>
+            </div>
+            <div class="productCaption">
+              <a href="single_product.html">
+                <h5>Cras vel augue</h5>
+              </a>
+              <h3>109円</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'layouts/partners' %>
