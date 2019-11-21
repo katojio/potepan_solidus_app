@@ -29,9 +29,9 @@ Solidusを用いたECサイト。
 ・商品カテゴリーツリーの動的表示
 
 # 環境
-■フレームワーク
-　Ruby on Rails
-■インフラ
-　heroku, Docker
-■データベース
+■フレームワーク  
+　Ruby on Rails  
+■インフラ  
+　heroku, Docker  
+■データベース  
 　MySQL
